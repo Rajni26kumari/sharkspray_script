@@ -20,17 +20,21 @@ namespace Sharkspray.Utility
             Console.WriteLine(_adhesive);
             switch (_adhesive)
             {
-                case "PSA - Adhesive Double-Coated Tape (DCT)":
+                case "PSA - Adhesive Transfer Tape (ATT)":
                     BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._adhesiveDropdown)).Click();
                     BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._pstt)).Click();
                     break;
-                case "Pressure Sensitive Double-Coated Tape (PSA-DCT)":
-                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._pstt)).Click();
+                case "PSA - Adhesive Double-Coated Tape (DCT)":
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._adhesiveDropdown)).Click();
                     BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._psdct)).Click();
                     break;
                 case "VHB":
-                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._pstt)).Click();
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._adhesiveDropdown)).Click();
                     BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._vha)).Click();
+                    break;
+                case "OCA":
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._adhesiveDropdown)).Click();
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._oca)).Click();
                     break;
 
             }
@@ -55,7 +59,7 @@ namespace Sharkspray.Utility
                     ExplicitWaiting.waitForTime(3000);
                     BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._phase2)).Click();
                     break;
-                case "Phase 3(DMA + Compression + Tensile)":
+                case "Phase 3(DMA + Compression + Tension)":
                     ExplicitWaiting.waitForTime(3000);
                     BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._modelPhaseDropdown)).Click();
                     ExplicitWaiting.waitForTime(3000);
@@ -63,6 +67,49 @@ namespace Sharkspray.Utility
                     break;
             }
         }
+        public static void SelectDivision(string _division)
+        {
+            switch (_division)
+            {
+                case "AASD":
+                    ExplicitWaiting.waitForTime(3000);
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._divisionDropdown)).Click();
+                    ExplicitWaiting.waitForTime(3000);
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._aasd)).Click();
+                    break;
+                case "CRL":
+                    ExplicitWaiting.waitForTime(3000);
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._divisionDropdown)).Click();
+                    ExplicitWaiting.waitForTime(3000);
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._crl)).Click();
+                    break;
+                case "DMSD":
+                    ExplicitWaiting.waitForTime(3000);
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._divisionDropdown)).Click();
+                    ExplicitWaiting.waitForTime(3000);
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._dmsd)).Click();
+                    break;
+                case "EMSD":
+                    ExplicitWaiting.waitForTime(3000);
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._divisionDropdown)).Click();
+                    ExplicitWaiting.waitForTime(3000);
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._emsd)).Click();
+                    break;
+                case "IATD":
+                    ExplicitWaiting.waitForTime(3000);
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._divisionDropdown)).Click();
+                    ExplicitWaiting.waitForTime(3000);
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._iatd)).Click();
+                    break;
+                case "Other":
+                    ExplicitWaiting.waitForTime(3000);
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._divisionDropdown)).Click();
+                    ExplicitWaiting.waitForTime(3000);
+                    BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._other)).Click();
+                    break;
+            }
+        }
+
         /// <summary>
         /// scrolling to an element.
         /// </summary>

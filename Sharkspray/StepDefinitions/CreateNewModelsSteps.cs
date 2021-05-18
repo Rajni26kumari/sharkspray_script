@@ -1,5 +1,4 @@
-﻿
-using Sharkspray.Utility;
+﻿using Sharkspray.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +24,7 @@ namespace Sharkspray.StepDefinitions
         public void WhenUserLoginWithCredentials()
         {
             BrowserConfig.login();
-            ExplicitWaiting.waitForTime(3000);
+            
         }
 
         [Then(@"After landing on sharkspray page, click on AdhesiveType Dropdown\.")]
@@ -41,6 +40,33 @@ namespace Sharkspray.StepDefinitions
             GetValues _adhesive = table.CreateInstance<GetValues>();
             HelpingFunctions.SelectAdhesiveType(_adhesive.AdhesiveType);
         }
+        [Then(@"click on Model Phase Dropdown\.")]
+        public void ThenClickOnModelPhaseDropdown_()
+        {
+            ExplicitWaiting.waitForAnElement(ObjectIdentifiers._modelPhaseDropdown);
+        }
+
+        [Then(@"Select Model Phase from dropdown\.")]
+        public void ThenSelectModelPhaseFromDropdown_(Table table)
+        {
+            ExplicitWaiting.waitForTime(2000);
+            GetValues _model = table.CreateInstance<GetValues>();
+            HelpingFunctions.SelectModelPhase(_model.ModelPhase);
+        }
+        [Then(@"Click on Division Dropdown\.")]
+        public void ThenClickOnDivisionDropdown_()
+        {
+            ExplicitWaiting.waitForAnElement(ObjectIdentifiers._divisionDropdown);
+        }
+
+        [Then(@"Select Division from dropdown\.")]
+        public void ThenSelectDivisionFromDropdown_(Table table)
+        {
+            ExplicitWaiting.waitForTime(2000);
+            GetValues _division = table.CreateInstance<GetValues>();
+            HelpingFunctions.SelectDivision(_division.Division);
+        }
+
 
     }
 }

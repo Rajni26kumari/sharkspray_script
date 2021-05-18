@@ -28,9 +28,9 @@ namespace Sharkspray
             if (_driver != null)
             {
                 string _currentUrl = _driver.Url;
-                if (_currentUrl.Equals(_sftwrDwnldPortalUrl))
+                if (_currentUrl.Equals(_baseUrl))
                 {
-                    Console.WriteLine("Already on the 3M Software Download Portal.");
+                    Console.WriteLine("Already on sharkspray site ");
                 }
                 else
                 {
@@ -80,24 +80,10 @@ namespace Sharkspray
             }
             catch (Exception _ex)
             {
-                //log
+                Console.WriteLine("Error" + _ex);
             }
 
             
         }
-
-
-        //public static void setCookie()
-        //{
-
-        //    Cookie ck = new Cookie("csrftoken", "2YJohLJqanvJ8Jb2SUm2XEbkBbpDLdHj6WMAUenVMbVTSJnX1MpensR3OMwvL8iM");
-        //    Cookie ck1 = new Cookie("sessionid", "igoo616mphr5vdub0rzps0so77e3t6ni");
-
-        //    _driver.Manage().Cookies.AddCookie(ck);
-        //    _driver.Manage().Cookies.AddCookie(ck1);
-
-
-
-        //}
     }
 }

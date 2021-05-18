@@ -8,25 +8,34 @@ namespace Sharkspray
 {
     class ObjectIdentifiers
     {
-        //*[@id="select-newmodel_adhesive_type_select"]  //*[@id="menu-newmodel_adhesive_type_select"]/div[2]/ul/li[1]
+        
         public static readonly string _adhesiveDropdown = "//*[@id='select-newmodel_adhesive_type_select']";
-        public static readonly string _pstt = "/html/body/div[4]/div[2]/ul/li[1]";
-        public static readonly string _psdct = "/html/body/div[4]/div[2]/ul/li[2]";
-        public static readonly string _vha = "/html/body/div[4]/div[2]/ul/li[3]";
+        public static readonly string _pstt = "//*[@id='menu-newmodel_adhesive_type_select']/div[2]/ul/li[1]";
+        public static readonly string _psdct ="//*[@id='menu-newmodel_adhesive_type_select']/div[2]/ul/li[2]";
+        public static readonly string _vha = "//*[@id='menu-newmodel_adhesive_type_select']/div[2]/ul/li[3]";
+        public static readonly string _oca = "//*[@id='menu-newmodel_adhesive_type_select']/div[2]/ul/li[4]";
         public static readonly string _dropDmaFilesIdentifier = "//*[@id='dmaDrop']";
         public static readonly string _dropCompFilesIdentifier = "//*[@id='comp_drop']";
-        public static readonly string _removeFileButton = "/html/body/div[3]/div/div/main/div[2]/div/div[2]/div/div/div[2]/div/div[2]/a";
-        public static readonly string _cancelUploadButton = "/html/body/div[3]/div/div/main/div[2]/div/div[2]/div/div/div[2]/div/div[2]/a";
+        public static readonly string _dropTensFilesIdentifier = "//*[@id='root']/div/div/main/div[2]/div/div[2]/div/div/div[2]/div[3]/div/div";
+        public static readonly string _removeFileButton = "//*[@id='root']/div/div/main/div[2]/div/div[2]/div/div/div[2]/div[1]/div/div/div[2]/a";
+        public static readonly string _cancelUploadButton = "//*[@id='root']/div/div/main/div[2]/div/div[2]/div/div/div[2]/div[1]/div/div/div[2]/a";
         public static readonly string _fileDisplayTable = "/html/body/div[3]/div/div/main/div[2]/div/div[2]/div/div/div[4]/div/div/div/div[3]/table/tbody/tr";
-        public static readonly string _clearAllFilesButton = "/html/body/div[3]/div/div/main/div[2]/div/div[2]/div/div/div[3]/span/span[1]";
-        public static readonly string _generateConstitutiveModelBtn = "/html/body/div[3]/div/div/main/div[2]/div/div[2]/div/div/div[5]/div/span";
-        public static readonly string _deformationModeDropdownBtn = "/html/body/div[3]/div/div/main/div[2]/div/div[2]/div/div/div[4]/div/div/div/div[3]/table/tbody/tr/td[8]/div/div/div/div";
+        public static readonly string _clearAllFilesButton = "//*[@id='root']/div/div/main/div[2]/div/div[2]/div/div/div[3]/span/span[1]";
+        public static readonly string _generateConstitutiveModelBtn = "//*[@id='root']/div/div/main/div[2]/div/div[2]/div/div/div[5]/div/span/span[1]";
+        public static readonly string _deformationModeDropdownBtn = "//*[@id='select-deformation_mode_select']";
         public static readonly string _density = "//*[@id='standard-number']";
-        public static readonly string _replicateNumberDropdownBtn = "/html/body/div[3]/div/div/main/div[2]/div/div[2]/div/div/div[4]/div/div/div/div[3]/table/tbody/tr/td[12]/div/div/div/div";
-        public static readonly string _phase1 = "/html/body/div[4]/div[2]/ul/li[1]";
-        public static readonly string _phase2 = "/html/body/div[4]/div[2]/ul/li[2]";
-        public static readonly string _phase3 = "/html/body/div[4]/div[2]/ul/li[3]";
+        public static readonly string _replicateNumberDropdownBtn = "//*[@id='select-replicate_group_select']";
+        public static readonly string _phase1 = "//*[@id='menu-newmodel_phase_select']/div[2]/ul/li[1]";
+        public static readonly string _phase2 = "//*[@id='menu-newmodel_phase_select']/div[2]/ul/li[2]";
+        public static readonly string _phase3 = "//*[@id='menu-newmodel_phase_select']/div[2]/ul/li[3]";
         public static readonly string _modelPhaseDropdown = "//*[@id='select-newmodel_phase_select']";
+        public static readonly string _divisionDropdown = "//*[@id='select-newmodel_division_type_select']";
+        public static readonly string _aasd = "//*[@id='menu-newmodel_division_type_select']/div[2]/ul/li[1]";
+        public static readonly string _crl = "//*[@id='menu-newmodel_division_type_select']/div[2]/ul/li[2]";
+        public static readonly string _dmsd = "//*[@id='menu-newmodel_division_type_select']/div[2]/ul/li[3]";
+        public static readonly string _emsd = "//*[@id='menu-newmodel_division_type_select']/div[2]/ul/li[4]";
+        public static readonly string _iatd = "//*[@id='menu-newmodel_division_type_select']/div[2]/ul/li[5]";
+        public static readonly string _other = "//*[@id='menu-newmodel_division_type_select']/div[2]/ul/li[6]";
         public static readonly string _deformModeVal1 = "/html/body/div[4]/div[2]/ul/li[1]";
         public static readonly string _deformModeVal2 = "/html/body/div[4]/div[2]/ul/li[2]";
         public static readonly string _deformModeVal3 = "/html/body/div[4]/div[2]/ul/li[3]";
@@ -34,7 +43,7 @@ namespace Sharkspray
         public static readonly string _deformModeVal5 = "/html/body/div[4]/div[2]/ul/li[5]";
         public static readonly string _username = "//*[@id='i0116']";
         public static readonly string _next = "//*[@id='idSIButton9']";
-        public static readonly string _workac = "//*[@id='aadTile']";
+        public static readonly string _workac = "//*[@id='aadTileTitle']";
 
         ///Visualize Model Data 
         public static readonly string _selectorModeIdentifier = "/html/body/div[3]/div/div/main/div[6]/div/div/div[2]/div/div/div[1]/div/div[3]/table/tbody/tr/td[3]";

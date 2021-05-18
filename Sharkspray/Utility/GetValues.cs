@@ -10,6 +10,7 @@ namespace Sharkspray.Utility
     {
         public string AdhesiveType { get; set; }
         public string ModelPhase { get; set; }
+        public string Division { get; set; }
         public string DeformationMode { get; set; }
         public string ChartType { get; set; }
 
