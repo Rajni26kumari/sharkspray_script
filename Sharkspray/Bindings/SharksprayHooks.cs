@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
+
 namespace Sharkspray.Bindings
 {
     [Binding]
-    class SharksprayHooks
+    class SharksprayHooks:BrowserConfig
     {
 
         [BeforeScenario]
@@ -284,15 +285,24 @@ namespace Sharkspray.Bindings
 
 
         }
-        [AfterFeature]
-        public static void CloseBrowserInstance()
+        [AfterScenario]
+
+        public void AfterScenario()
         {
-            Console.WriteLine("kriti");
-            BrowserConfig._driver.Quit();
-            var path = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "");
-            string chromedriverbatchfile = path + "\\killChromedriver" + ".bat";
-            System.Diagnostics.Process.Start(chromedriverbatchfile);
-            BrowserConfig._driver = null;
+            _driver.Close();
+            _driver.Quit();
+            _driver = null;
+            
         }
+        //[AfterFeature]
+        //public static void CloseBrowserInstance()
+        //{
+        //    Console.WriteLine("kriti");
+        //    BrowserConfig._driver.Quit();
+        //    var path = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "");
+        //    string chromedriverbatchfile = path + "\\killChromedriver" + ".bat";
+        //    System.Diagnostics.Process.Start(chromedriverbatchfile);
+        //    BrowserConfig._driver = null;
+        //}
     }
 }

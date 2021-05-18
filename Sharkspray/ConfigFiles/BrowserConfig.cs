@@ -20,7 +20,7 @@ namespace Sharkspray
         public static readonly string _baseUrl = ConfigurationManager.AppSettings.Get("url");
         public static readonly string _browser = ConfigurationManager.AppSettings.Get("browsers");
         public static readonly string _username = ConfigurationManager.AppSettings.Get("username");
-        public static string _sftwrDwnldPortalUrl = "https://download-qa.3m.com/Home/ViewSoftwareAno";
+        //public static string _sftwrDwnldPortalUrl = "https://download-qa.3m.com/Home/ViewSoftwareAno";
 
         public static void Init()
         {
@@ -69,9 +69,10 @@ namespace Sharkspray
 
         public static void login()
         {
+            ExplicitWaiting.waitForTime(5000);
             _driver.FindElement(By.XPath(ObjectIdentifiers._username)).SendKeys(_username);
             _driver.FindElement(By.XPath(ObjectIdentifiers._next)).Click();
-            Thread.Sleep(3000);
+            ExplicitWaiting.waitForTime(3000);
             _driver.FindElement(By.XPath(ObjectIdentifiers._workac)).Click();
             ExplicitWaiting.waitForTime(5000);
             try

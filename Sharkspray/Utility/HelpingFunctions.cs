@@ -156,7 +156,7 @@ namespace Sharkspray.Utility
                     BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._deformationModeDropdownBtn)).Click();
                     BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._deformModeVal1)).Click();
                     break;
-                case "Tensile":
+                case "Tension":
                     BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._deformationModeDropdownBtn)).Click();
                     BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._deformModeVal1)).Click();
                     break;
