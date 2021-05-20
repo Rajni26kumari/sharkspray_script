@@ -69,7 +69,7 @@ namespace Sharkspray
 
         public static void login()
         {
-            ExplicitWaiting.waitForTime(5000);
+            ExplicitWaiting.waitForAnElement(ObjectIdentifiers._next); ;
             _driver.FindElement(By.XPath(ObjectIdentifiers._username)).SendKeys(_username);
             _driver.FindElement(By.XPath(ObjectIdentifiers._next)).Click();
             ExplicitWaiting.waitForTime(3000);

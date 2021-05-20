@@ -171,27 +171,37 @@ And click on generate constitutive mechanical model button.
 
 Scenario:_11 Multiple DMA (compress) file upload.
 Given Go to url.
-When After landing on sharkspray page, click on AdhesiveType Dropdown.
-Then Select adhesive type from dropdown.
+When user login with credentials
+Then After landing on sharkspray page, click on AdhesiveType Dropdown.
+And Select adhesive type from dropdown.
 | AdhesiveType                               |
 |PSA - Adhesive Double-Coated Tape (DCT)|
-And click on Model Phase Dropdown.
-And  Select Model Phase from dropdown.
+Then click on Model Phase Dropdown.
+And Select Model Phase from dropdown.
 | ModelPhase   |
-| Phase 2(DMA + Compression) | 
+| Phase 2(DMA + Compression) |
+Then Click on Division Dropdown.
+And Select Division from dropdown.
+| Division |
+|  EMSD        |
 And  click on drop DMA files button and upload file.
 Then Upload compression file.
 
-Scenario:_11 Multiple DMA (Tesnion) file upload.
+Scenario:_12 Multiple DMA (Tesnion) file upload.
 Given Go to url.
-When After landing on sharkspray page, click on AdhesiveType Dropdown.
-Then Select adhesive type from dropdown.
+When user login with credentials
+Then After landing on sharkspray page, click on AdhesiveType Dropdown.
+And Select adhesive type from dropdown.
 | AdhesiveType                               |
 |PSA - Adhesive Double-Coated Tape (DCT)|
-And click on Model Phase Dropdown.
-And  Select Model Phase from dropdown.
+Then click on Model Phase Dropdown.
+And Select Model Phase from dropdown.
 | ModelPhase   |
-| Phase 3(DMA + Compression + Tension) | 
+| Phase 3(DMA + Compression + Tension) |
+Then Click on Division Dropdown.
+And Select Division from dropdown.
+| Division |
+|  EMSD        |
 And  click on drop DMA files button and upload file.
 Then Upload compression file.
 And Upload tension file.

@@ -72,9 +72,18 @@ namespace Sharkspray.StepDefinitions
         [Then(@"click on drop DMA files button and upload file\.")]
         public void ThenClickOnDropDMAFilesButtonAndUploadFile_()
         {
+            ExplicitWaiting.waitForTime(3000);
             BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._dropDmaFilesIdentifier)).Click();
             ExplicitWaiting.waitForTime(2000);
-            Process.Start(@"F:\3M-projects\sharkspray\FileUpload.exe");
+            try
+            {
+                Process.Start(@"F:\3M-projects\sharkspray\FileUpload.exe");
+            }
+            catch (Exception _ex)
+            {
+                Console.WriteLine("Error" + _ex);
+            }
+
         }
 
         [Then(@"Verify file upload\.")]
@@ -126,7 +135,7 @@ namespace Sharkspray.StepDefinitions
         [Then(@"Send density value\.")]
         public void ThenSendDensityValue_()
         {
-            ExplicitWaiting.waitForTime(7000);
+            ExplicitWaiting.waitForTime(9000);
             BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._density)).SendKeys(".1");
         }
         [Then(@"click on generate constitutive mechanical model button\.")]
@@ -134,25 +143,45 @@ namespace Sharkspray.StepDefinitions
         {
             BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._generateConstitutiveModelBtn)).Click();
         }
-        [When(@"After landing on sharkspray page, click on AdhesiveType Dropdown\.")]
-        public void WhenAfterLandingOnSharksprayPageClickOnAdhesiveTypeDropdown_()
-        {
-            ScenarioContext.Current.Pending();
-        }
+        //[When(@"After landing on sharkspray page, click on AdhesiveType Dropdown\.")]
+        //public void WhenAfterLandingOnSharksprayPageClickOnAdhesiveTypeDropdown_()
+        //{
+        //    ScenarioContext.Current.Pending();
+        //}
 
         [Then(@"Upload compression file\.")]
         public void ThenUploadCompressionFile_()
         {
             BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._dropCompFilesIdentifier)).Click();
             ExplicitWaiting.waitForTime(2000);
-            Process.Start(@"F:\3M-projects\sharkspray\CompressFileUpload.exe");
+            try
+            {
+                Process.Start(@"F:\3M-projects\sharkspray\CompressFileUpload.exe");
+            }
+            catch (Exception _ex)
+            {
+                Console.WriteLine("Error" + _ex);
+            }
         }
+            
+        
         [Then(@"Upload tension file\.")]
         public void ThenUploadTensionFile_()
         {
             BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._dropTensFilesIdentifier)).Click();
             ExplicitWaiting.waitForTime(2000);
-            Process.Start(@"F:\3M-projects\sharkspray\TeansionFileUpload.exe");
+            try
+            {
+                 Process.Start(@"F:\3M-projects\sharkspray\TeansionFileUpload.exe");
+
+            }
+            catch (Exception _ex)
+            {
+
+
+                Console.WriteLine("Error" + _ex);
+            }
+
         }
 
 

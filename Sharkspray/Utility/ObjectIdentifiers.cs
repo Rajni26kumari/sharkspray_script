@@ -9,6 +9,7 @@ namespace Sharkspray
     class ObjectIdentifiers
     {
         
+        public static readonly string _createnewmodeltitle = "//*[@id='root']/div/div/main/div[2]/div/div[2]/div/h2";
         public static readonly string _adhesiveDropdown = "//*[@id='select-newmodel_adhesive_type_select']";
         public static readonly string _pstt = "//*[@id='menu-newmodel_adhesive_type_select']/div[2]/ul/li[1]";
         public static readonly string _psdct ="//*[@id='menu-newmodel_adhesive_type_select']/div[2]/ul/li[2]";
@@ -17,7 +18,7 @@ namespace Sharkspray
         public static readonly string _dropDmaFilesIdentifier = "//*[@id='dmaDrop']"; 
         public static readonly string _dropCompFilesIdentifier = "//*[@id='comp_drop']";
         public static readonly string _dropTensFilesIdentifier = "//*[@id='root']/div/div/main/div[2]/div/div[2]/div/div/div[2]/div[3]/div/div";
-        public static readonly string _removeFileButton = "//*[@id='dmaDrop']/div[2]/a";
+        public static readonly string _removeFileButton = "//*[@id='dmaDrop']/div[2]/a"; //*[@id="dmaDrop"]/div[2]/a
         public static readonly string _cancelUploadButton = "//*[@id='root']/div/div/main/div[2]/div/div[2]/div/div/div[2]/div[1]/div/div/div[2]/a";
         public static readonly string _fileDisplayTable = "/html/body/div[3]/div/div/main/div[2]/div/div[2]/div/div/div[4]/div/div/div/div[3]/table/tbody/tr";
         public static readonly string _clearAllFilesButton = "//*[@id='root']/div/div/main/div[2]/div/div[2]/div/div/div[3]/span/span[1]";
@@ -55,7 +56,7 @@ namespace Sharkspray
         public static readonly string _chartTypeVal5 = "/html/body/div[5]/div[2]/ul/li[5]";
         public static readonly string _chartTypeVal6 = "/html/body/div[5]/div[2]/ul/li[6]";
         public static readonly string _chartTypeVal7 = "/html/body/div[5]/div[2]/ul/li[7]";
-        public static readonly string _saveChartBtn = " /html/body/div[3]/div/div/main/div[6]/div/div/div[1]/div/div/div[2]/span[2]";
+        public static readonly string _saveChartBtn = "//*[@id='viz']/div/div/div[2]/span[2]/span[1]";
 
         //Export and save models
 
@@ -69,33 +70,35 @@ namespace Sharkspray
         public static readonly string _exportModelasZipButton = "/html/body/div[3]/div/div/main/div[6]/div/div/div[2]/div/div/div[2]/span[3]/span[1]";
 
         //Load Your Models
-        public static readonly string _loadYourModelsIdentifier = "/html/body/div[3]/div/div/div/div/div/div/div[2]/nav[1]/li[2]/div/p";
-        public static readonly string _modelSearchboxButton = "/html/body/div[3]/div/div/main/div[3]/div/div/div/div[2]/div[1]/div/div/div[1]/div[2]/button";
+        public static readonly string _loadYourModelsIdentifier = "//*[@id='root']/div/div/div/div/div/div/div[2]/nav[1]/li[2]/div[2]/p";
+        public static readonly string _modelSearchboxButton = "//*[@id='root']/div/div/main/div[3]/div/div/div/div[2]/div[1]/div/div/div[1]/div[2]/button/span[1]/svg";
         public static readonly string _modelSearchboxIdentifier = "/html/body/div[3]/div/div/main/div[3]/div/div/div/div[2]/div[1]/div/div/div[1]/div[1]/div/div/div/input";
-        public static readonly string _modelNameIdentifier = "/html/body/div[3]/div/div/main/div[3]/div/div/div/div[2]/div[1]/div/div/div[3]/table/tbody/tr[1]/td[3]";
-        public static readonly string _modelNameCheckboxIdentifier = "/html/body/div[3]/div/div/main/div[3]/div/div/div/div[2]/div[1]/div/div/div[3]/table/tbody/tr/td[1]/span/span[1]/input";
-        public static readonly string _modelNameTextBox = "/html/body/div[3]/div/div/main/div[3]/div/div/div/div[2]/div[1]/div/div/div[1]";
+        public static readonly string _modelNameIdentifier = "//*[@id='root']/div/div/main/div[3]/div/div/div/div[2]/div[1]/div/div/div[1]/div[1]/div/div/div/input";
+        public static readonly string _modelNameCheckboxIdentifier = "//*[@id='root']/div/div/main/div[3]/div/div/div/div[2]/div[1]/div/div/div[3]/table/tbody/tr[3]/td[1]/span/span[1]/input";
+        public static readonly string _modelNameTextBox = "//*[@id='root']/div/div/main/div[3]/div/div/div/div[2]/div[1]/div/div/div[3]/table/tbody/tr[3]/td[3]";
         public static readonly string _loadConstitutiveModelButton = "/html/body/div[3]/div/div/main/div[3]/div/div/div/div[2]/div[2]/div/span/span[1]";
         public static readonly string _visualizeModelDataButton = "/html/body/div[3]/div/div/div/div/div/div/div[2]/nav[2]/li[1]/div/p";
         public static readonly string _visualizeModelCss = "#root > div > div > div > div > div > div > div.jss0149 > nav:nth-child(4) > li.jss0184.jss0173.jss0176.jss0180.jss0181.jss0183.jss0171.jss0172 > div > p";
 
-        //edit your models
-        public static readonly string _editYourModelsIdentifier = "/html/body/div[3]/div/div/div/div/div/div/div[2]/nav[1]/li[3]/div/p";
-        public static readonly string _searchboxEditModelButton = "/html/body/div[3]/div/div/main/div[4]/div/div/div/div/div[1]/div/div/div[1]/div[2]/button";
-        public static readonly string _searchBoxInputIdentifier = "/html/body/div[3]/div/div/main/div[4]/div/div/div/div/div[1]/div/div/div[1]/div[1]/div/div/div/input";
+        //edit your models  
+        public static readonly string _editexistingmodeltitle = "//*[@id='root']/div/div/main/div[4]/div/div/div/h2";
+        public static readonly string _editYourModelsIdentifier = "//*[@id='root']/div/div/div/div/div/div/div[2]/nav[1]/li[3]/div[2]/p";
+        public static readonly string _searchboxEditModelButton = "//button[@class='jss1178 jss1172 jss1156' and @title='Search']";
+        public static readonly string _searchBoxInputIdentifier = "//input[@class='jss1279 jss2216' and @type='text']";
         public static readonly string _checkboxEditModel = "/html/body/div[3]/div/div/main/div[4]/div/div/div/div/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/span/span[1]/input";
-        public static readonly string _deleteSelectedModelBtn = "/html/body/div[3]/div/div/main/div[4]/div/div/div/div/div[2]/div/span[2]/span[1]";
-        public static readonly string _deleteConfirmBtn = "/html/body/div[4]/div[2]/div/div[3]/button[2]/span[1]";
-        public static readonly string _modelEditCheckboxBtn = "/html/body/div[3]/div/div/main/div[4]/div/div/div/div/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/span/span[1]/input";
+        public static readonly string _deleteSelectedModelBtn = "//*[@id='root']/div/div/main/div[4]/div/div/div/div/div[2]/div/span[2]/span[1]";
+        public static readonly string _deleteConfirmBtn = "/html/body/div[5]/div[2]/div/div[3]/button[2]/span[1]";
+        public static readonly string _canceldeleteConfirmBtn = "/html/body/div[5]/div[2]/div/div[3]/button[1]/span[1]";
+        public static readonly string _modelEditCheckboxBtn = "//*[@id='root']/div/div/main/div[4]/div/div/div/div/div[1]/div/div/div[3]/table/tbody/tr[1]/td[1]/span/span[1]/input";
         public static readonly string _descrptionTextboxIdentifier = "//*[@id='edit_0_descinput']";
-        public static readonly string _updateSelectedModelBtn = "/html/body/div[3]/div/div/main/div[4]/div/div/div/div/div[2]/div/span[1]/span[1]";
+        public static readonly string _updateSelectedModelBtn = "//*[@id='root']/div/div/main/div[4]/div/div/div/div/div[2]/div/span[1]/span[1]";
 
         //Verified Models
-        public static readonly string _verifiedModelsBtn = "/html/body/div[3]/div/div/div/div/div/div/div[2]/nav[2]/li[3]/div[2]/p";
-        public static readonly string _searchBoxIdentifier = "/html/body/div[3]/div/div/main/div[7]/div/div/div/div[2]/div/div/div/div[1]/div[2]/button";
-        public static readonly string _searchBoxVerifiedModels = "/html/body/div[3]/div/div/main/div[7]/div/div/div/div[2]/div/div/div/div[1]/div[1]/div/div/div/input";
-        public static readonly string _verifiedModelsTableIdentifier = "/html/body/div[3]/div/div/main/div[7]/div/div/div/div[2]/div/div/div/div[3]/table/tbody/tr/td[2]";
-        public static readonly string _downloadModelInternal = "/html/body/div[3]/div/div/main/div[7]/div/div/div/div[2]/div/div/div/div[3]/table/tbody/tr[1]/td[14]/span/span/u";
-        public static readonly string _downloadModelExternal = "/html/body/div[3]/div/div/main/div[7]/div/div/div/div[2]/div/div/div/div[3]/table/tbody/tr[1]/td[16]/span/span/u";
+        public static readonly string _verifiedModelsBtn = "//*[@id='root']/div/div/div/div/div/div/div[2]/nav[2]/li[3]/div[2]/p";
+        public static readonly string _searchBoxIdentifier = "//*[@id='root']/div/div/main/div[7]/div/div/div/div[2]/div/div/div/div[1]/div[2]/button/span[1]/svg";
+        public static readonly string _searchBoxVerifiedModels = "//*[@id='root']/div/div/main/div[7]/div/div/div/div[2]/div/div/div/div[1]/div[1]/div/div/div/input";
+        public static readonly string _verifiedModelsTableIdentifier = "//*[@id='root']/div/div/main/div[7]/div/div/div/div[2]/div/div/div/div[3]/table/tbody/tr/td[2]";
+        public static readonly string _downloadModelInternal = "//*[@id='root']/div/div/main/div[7]/div/div/div/div[2]/div/div/div/div[3]/table/tbody/tr/td[14]/span/span/u";
+        public static readonly string _downloadModelExternal = "//*[@id='root']/div/div/main/div[7]/div/div/div/div[2]/div/div/div/div[3]/table/tbody/tr/td[16]/span/span/u";
     }
 }

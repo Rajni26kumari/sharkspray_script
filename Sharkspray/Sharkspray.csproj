@@ -110,11 +110,17 @@
     <Compile Include="Bindings\SharksprayHooks.cs" />
     <Compile Include="ConfigFiles\BrowserConfig.cs" />
     <Compile Include="Features\CreateNewModels.feature.cs" />
+    <Compile Include="Features\EditYourModels.feature.cs" />
+    <Compile Include="Features\LoadYourModels.feature.cs" />
+    <Compile Include="Features\VerifiedModels.feature.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\CreateNewModelsSteps.cs" />
+    <Compile Include="StepDefinitions\EditYourModelsSteps.cs" />
+    <Compile Include="StepDefinitions\LoadYourModelsSteps.cs" />
+    <Compile Include="StepDefinitions\VerifiedModelsSteps.cs" />
     <Compile Include="Utility\ExplicitWaiting.cs" />
     <Compile Include="Utility\GetValues.cs" />
     <Compile Include="Utility\HelpingFunctions.cs" />
@@ -127,6 +133,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Features\CreateNewModels.feature" />
+    <None Include="Features\EditYourModels.feature" />
+    <None Include="Features\LoadYourModels.feature" />
+    <None Include="Features\VerifiedModels.feature" />
     <None Include="killChromedriver.bat" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
