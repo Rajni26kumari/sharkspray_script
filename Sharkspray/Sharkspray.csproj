@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -111,16 +112,20 @@
     <Compile Include="ConfigFiles\BrowserConfig.cs" />
     <Compile Include="Features\CreateNewModels.feature.cs" />
     <Compile Include="Features\EditYourModels.feature.cs" />
+    <Compile Include="Features\ExportandSaveModels.feature.cs" />
     <Compile Include="Features\LoadYourModels.feature.cs" />
     <Compile Include="Features\VerifiedModels.feature.cs" />
+    <Compile Include="Features\VisualizeModelData.feature.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\CreateNewModelsSteps.cs" />
     <Compile Include="StepDefinitions\EditYourModelsSteps.cs" />
+    <Compile Include="StepDefinitions\ExportandSaveModelsSteps.cs" />
     <Compile Include="StepDefinitions\LoadYourModelsSteps.cs" />
     <Compile Include="StepDefinitions\VerifiedModelsSteps.cs" />
+    <Compile Include="StepDefinitions\VisualizeModelDataSteps.cs" />
     <Compile Include="Utility\ExplicitWaiting.cs" />
     <Compile Include="Utility\GetValues.cs" />
     <Compile Include="Utility\HelpingFunctions.cs" />
@@ -134,20 +139,42 @@
     </None>
     <None Include="Features\CreateNewModels.feature" />
     <None Include="Features\EditYourModels.feature" />
+    <None Include="Features\ExportandSaveModels.feature" />
     <None Include="Features\LoadYourModels.feature" />
     <None Include="Features\VerifiedModels.feature" />
+    <None Include="Features\VisualizeModelData.feature" />
     <None Include="killChromedriver.bat" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Resources\rheology.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\tension.xlsx" />
+    <None Include="TestResult\CreateNewModel.xlsx" />
+    <None Include="TestResult\EditYourModel.xlsx" />
+    <None Include="TestResult\ExportandSaveModel.xlsx" />
+    <None Include="TestResult\LoadYourModel.xlsx" />
+    <None Include="TestResult\VerifiedModel.xlsx" />
+    <None Include="TestResult\VisualizeModelData.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\packages\Selenium.Mozilla.Firefox.Webdriver.0.6.0.1\driver\wires-0.6.0-win.exe">
       <Link>wires-0.6.0-win.exe</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="AutiITScripts\AutoitScript.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AutiITScripts\FileUpload1.exe" />
     <Content Include="chromedriver.exe" />
     <Content Include="Readme.txt" />
+    <Content Include="Resources\compression.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="Screenshots\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AutoItX3Lib">
@@ -159,13 +186,6 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\" />
-    <Folder Include="bin\Release\" />
-    <Folder Include="DataFiles\" />
-    <Folder Include="Screenshots\" />
-    <Folder Include="TestResult\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

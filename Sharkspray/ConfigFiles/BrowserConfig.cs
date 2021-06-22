@@ -11,6 +11,7 @@ using System.Diagnostics;
 using System.Threading;
 using Sharkspray.Utility;
 using System.Configuration;
+using AutoItX3Lib;
 
 namespace Sharkspray
 {
@@ -20,7 +21,8 @@ namespace Sharkspray
         public static readonly string _baseUrl = ConfigurationManager.AppSettings.Get("url");
         public static readonly string _browser = ConfigurationManager.AppSettings.Get("browsers");
         public static readonly string _username = ConfigurationManager.AppSettings.Get("username");
-        //public static string _sftwrDwnldPortalUrl = "https://download-qa.3m.com/Home/ViewSoftwareAno";
+        protected static string path = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "");
+
 
         public static void Init()
         {
@@ -37,7 +39,7 @@ namespace Sharkspray
                     Goto(_baseUrl);
                 }
             }
-            
+
             else
             {
                 switch (_browser)
@@ -75,16 +77,17 @@ namespace Sharkspray
             ExplicitWaiting.waitForTime(3000);
             _driver.FindElement(By.XPath(ObjectIdentifiers._workac)).Click();
             ExplicitWaiting.waitForTime(5000);
+            string autoitPath= path + "\\AutiITScripts" + "\\AutoitScript" + ".exe";
+          
             try
             {
-                Process.Start(@"C:\Users\DELL\source\repos\Sharkspray3M_projcode\AutoitScript.exe");
+                Process.Start(autoitPath);
             }
             catch (Exception _ex)
             {
-                Console.WriteLine("Error" + _ex);
+                Console.WriteLine("Error" + _ex.Message);
             }
-
-            
         }
     }
-}
+    }
+

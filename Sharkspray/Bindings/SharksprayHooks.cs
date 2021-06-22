@@ -57,14 +57,14 @@ namespace Sharkspray.Bindings
             int _colNumber = 5;
             int _sheet = 1;
             int _rowCount = 3;
-            if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_01 Loaded Models Selection."))
+            if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_29 Loaded Models Selection."))
             {
                 _fileName = "ExportAndSaveModel";
                 _colNumber = 5;
                 _sheet = 1;
                 _rowCount = 3;
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_02 'Save Selected Model' Button Verification."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_30 'Save Selected Model' Button Verification."))
             {
                 _fileName = "ExportAndSaveModel";
                 _colNumber = 5;
@@ -72,7 +72,7 @@ namespace Sharkspray.Bindings
                 _rowCount = 4;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_03 'Export External Data Package' Verification."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_31 'Export External Data Package' Verification."))
             {
                 _fileName = "ExportAndSaveModel";
                 _colNumber = 5;
@@ -96,7 +96,15 @@ namespace Sharkspray.Bindings
                 _rowCount = 4;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_03 DMA files upload verification."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_03 Verify division Dropdown"))
+            {
+                _fileName = "CreateNewModel";
+                _colNumber = 5;
+                _sheet = 1;
+                _rowCount = 5;
+
+            }
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_04 DMA files upload verification."))
             {
                 _fileName = "CreateNewModel";
                 _colNumber = 5;
@@ -104,7 +112,7 @@ namespace Sharkspray.Bindings
                 _rowCount = 6;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_04 Cancel Upload Button verification."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_05 Cancel Upload Button verification."))
             {
                 _fileName = "CreateNewModel";
                 _colNumber = 5;
@@ -112,7 +120,7 @@ namespace Sharkspray.Bindings
                 _rowCount = 7;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_05 Remove file button verification."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_23 Verify Model Name"))
             {
                 _fileName = "CreateNewModel";
                 _colNumber = 5;
@@ -160,7 +168,8 @@ namespace Sharkspray.Bindings
                 _rowCount = 13;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_11 Multiple DMA file upload."))
+            
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_11 Multiple DMA (compress) file upload. "))
             {
                 _fileName = "CreateNewModel";
                 _colNumber = 5;
@@ -168,7 +177,15 @@ namespace Sharkspray.Bindings
                 _rowCount = 14;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_01 Verify Selected Model."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_12 Multiple DMA (Tesnion) file upload."))
+            {
+                _fileName = "CreateNewModel";
+                _colNumber = 5;
+                _sheet = 1;
+                _rowCount = 15;
+
+            }
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_24 Verify Selected Model."))
             {
                 _fileName = "VisualizeModelData";
                 _colNumber = 5;
@@ -176,7 +193,7 @@ namespace Sharkspray.Bindings
                 _rowCount = 3;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_02 Verify Chart Type Dropdown."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_25 Verify Chart Type ."))
             {
                 _fileName = "VisualizeModelData";
                 _colNumber = 5;
@@ -184,7 +201,7 @@ namespace Sharkspray.Bindings
                 _rowCount = 4;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_03 Verify Chart save."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_28 Verify Chart save."))
             {
                 _fileName = "VisualizeModelData";
                 _colNumber = 5;
@@ -192,7 +209,23 @@ namespace Sharkspray.Bindings
                 _rowCount = 5;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_01 Verify Searchbox"))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_26 Verify Master Curve Reference Temperature."))
+            {
+                _fileName = "VisualizeModelData";
+                _colNumber = 5;
+                _sheet = 1;
+                _rowCount = 6;
+
+            }
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_27 Verify update master curve button status."))
+            {
+                _fileName = "VisualizeModelData";
+                _colNumber = 5;
+                _sheet = 1;
+                _rowCount = 7;
+
+            }
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_17 Verify Searchbox"))
             {
                 _fileName = "LoadYourModels";
                 _colNumber = 5;
@@ -200,7 +233,7 @@ namespace Sharkspray.Bindings
                 _rowCount = 3;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_02 Model Name Selection."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_18 Model Name Selection."))
             {
                 _fileName = "LoadYourModels";
                 _colNumber = 5;
@@ -209,7 +242,7 @@ namespace Sharkspray.Bindings
 
             }
 
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_03 Load Constitutive Mechanical Model Verification."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_19 Load Constitutive Mechanical Model Verification."))
             {
                 _fileName = "LoadYourModels";
                 _colNumber = 5;
@@ -217,7 +250,7 @@ namespace Sharkspray.Bindings
                 _rowCount = 5;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_01 Verify Searchbox of edit your Models."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_13 Verify Searchbox of edit your Models."))
             {
                 _fileName = "EditYourModels";
                 _colNumber = 5;
@@ -225,7 +258,7 @@ namespace Sharkspray.Bindings
                 _rowCount = 3;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_03 Delete selected Model."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_15 Delete selected Model."))
             {
                 _fileName = "EditYourModels";
                 _colNumber = 5;
@@ -233,7 +266,7 @@ namespace Sharkspray.Bindings
                 _rowCount = 4;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_02 Update selected Model."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_14 Update selected Model."))
             {
                 _fileName = "EditYourModels";
                 _colNumber = 5;
@@ -241,7 +274,15 @@ namespace Sharkspray.Bindings
                 _rowCount = 5;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_01 Verify SearchBox Functionality."))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_16 Cancel Delete selected Model"))
+            {
+                _fileName = "EditYourModels";
+                _colNumber = 5;
+                _sheet = 1;
+                _rowCount = 6;
+
+            }
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_20 Verify SearchBox Functionality."))
             {
                 _fileName = "VerifiedModels";
                 _colNumber = 5;
@@ -249,7 +290,7 @@ namespace Sharkspray.Bindings
                 _rowCount = 3;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_02 Verify Download Model(Internal)"))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_21 Verify Download Model(Internal)"))
             {
                 _fileName = "VerifiedModels";
                 _colNumber = 5;
@@ -257,7 +298,7 @@ namespace Sharkspray.Bindings
                 _rowCount = 4;
 
             }
-            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_03 Verify Download Model(External)"))
+            else if (ScenarioContext.Current.ScenarioInfo.Title.Equals("_22 Verify Download Model(External)"))
             {
                 _fileName = "VerifiedModels";
                 _colNumber = 5;
@@ -294,15 +335,15 @@ namespace Sharkspray.Bindings
             _driver = null;
             
         }
-        //[AfterFeature]
-        //public static void CloseBrowserInstance()
-        //{
-        //    Console.WriteLine("kriti");
-        //    BrowserConfig._driver.Quit();
-        //    var path = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "");
-        //    string chromedriverbatchfile = path + "\\killChromedriver" + ".bat";
-        //    System.Diagnostics.Process.Start(chromedriverbatchfile);
-        //    BrowserConfig._driver = null;
-        //}
+        [AfterFeature]
+        public static void CloseBrowserInstance()
+        {
+            
+            //BrowserConfig._driver.Quit();
+            var path = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "");
+            string chromedriverbatchfile = path + "\\killChromedriver" + ".bat";
+            System.Diagnostics.Process.Start(chromedriverbatchfile);
+            BrowserConfig._driver = null;
+        }
     }
 }

@@ -1,21 +1,23 @@
-﻿using OpenQA.Selenium;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 using Sharkspray.Utility;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
 namespace Sharkspray.StepDefinitions
 {
     [Binding]
-    
-    public sealed class CreateNewModelsSteps
+
+    public class CreateNewModelsSteps
     {
-        
+
+        protected static string path = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "");
+        string FileUploadtPath = path + "\\AutiITScripts" + "\\FileUpload1" + ".exe";
+        //public static string _destpath = Directory.GetCurrentDirectory();
+        //[DeploymentItem("Resources")]
+
         [Given(@"Go to url\.")]
         public void GivenGoToUrl_()
         {
@@ -32,6 +34,7 @@ namespace Sharkspray.StepDefinitions
         [Then(@"After landing on sharkspray page, click on AdhesiveType Dropdown\.")]
         public void ThenAfterLandingOnSharksprayPageClickOnAdhesiveTypeDropdown_()
         {
+            
             ExplicitWaiting.waitForAnElementUntilClickable(ObjectIdentifiers._adhesiveDropdown);
         }
 
@@ -74,16 +77,18 @@ namespace Sharkspray.StepDefinitions
         {
             ExplicitWaiting.waitForTime(3000);
             BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._dropDmaFilesIdentifier)).Click();
-            ExplicitWaiting.waitForTime(2000);
+            ExplicitWaiting.waitForTime(2000);          
+            string UploadFile = path + "Resources" + "\\rheology" + ".xlsx";
             try
             {
-                Process.Start(@"F:\3M-projects\sharkspray\FileUpload.exe");
+                Process.Start(FileUploadtPath,UploadFile);
             }
             catch (Exception _ex)
             {
-                Console.WriteLine("Error" + _ex);
+                Console.WriteLine("Error" + _ex.Message);
             }
 
+           
         }
 
         [Then(@"Verify file upload\.")]
@@ -92,6 +97,7 @@ namespace Sharkspray.StepDefinitions
             ExplicitWaiting.waitForTime(8000);
             IWebElement searchElement = BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._removeFileButton));
             HelpingFunctions.elementVisible(searchElement);
+            
         }
         [Then(@"Click on cancel upload button to cancel uploading the file\.")]
         public void ThenClickOnCancelUploadButtonToCancelUploadingTheFile_()
@@ -142,6 +148,7 @@ namespace Sharkspray.StepDefinitions
         public void ThenClickOnGenerateConstitutiveMechanicalModelButton_()
         {
             BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._generateConstitutiveModelBtn)).Click();
+            
         }
         //[When(@"After landing on sharkspray page, click on AdhesiveType Dropdown\.")]
         //public void WhenAfterLandingOnSharksprayPageClickOnAdhesiveTypeDropdown_()
@@ -154,9 +161,10 @@ namespace Sharkspray.StepDefinitions
         {
             BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._dropCompFilesIdentifier)).Click();
             ExplicitWaiting.waitForTime(2000);
+            string CompressionFile = path + "Resources" + "\\compression" + ".xml";
             try
             {
-                Process.Start(@"F:\3M-projects\sharkspray\CompressFileUpload.exe");
+                Process.Start(FileUploadtPath, CompressionFile);
             }
             catch (Exception _ex)
             {
@@ -170,10 +178,10 @@ namespace Sharkspray.StepDefinitions
         {
             BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._dropTensFilesIdentifier)).Click();
             ExplicitWaiting.waitForTime(2000);
+            string TensionFile = path + "Resources" + "\\tension" + ".xlsx";
             try
             {
-                 Process.Start(@"F:\3M-projects\sharkspray\TeansionFileUpload.exe");
-
+                Process.Start(FileUploadtPath, TensionFile);
             }
             catch (Exception _ex)
             {
@@ -184,6 +192,13 @@ namespace Sharkspray.StepDefinitions
 
         }
 
+        [Then(@"Click on model name text-box and write a name\.")]
+        public void ThenClickOnModelNameText_BoxAndWriteAName_()
+        {
+            ExplicitWaiting.waitForTime(4000);
+            BrowserConfig._driver.FindElement(By.XPath(ObjectIdentifiers._modelname)).SendKeys("-test");
+             
+        }
 
 
 

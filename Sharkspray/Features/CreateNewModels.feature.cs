@@ -366,10 +366,10 @@ testRunner.And("Verify removal of files.", ((string)(null)), ((TechTalk.SpecFlow
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("_08 Verification of Deformation Mode dropdown.")]
-        public virtual void _08VerificationOfDeformationModeDropdown_()
+        [NUnit.Framework.DescriptionAttribute("_23 Verify Model Name")]
+        public virtual void _23VerifyModelName()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("_08 Verification of Deformation Mode dropdown.", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("_23 Verify Model Name", null, ((string[])(null)));
 #line 113
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -406,13 +406,62 @@ testRunner.Then("Click on Division Dropdown.", ((string)(null)), ((TechTalk.Spec
 testRunner.And("Select Division from dropdown.", ((string)(null)), table21, "And ");
 #line 128
 testRunner.And("click on drop DMA files button and upload file.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 129
+testRunner.And("Verify file upload.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 130
+testRunner.Then("Click on model name text-box and write a name.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("_08 Verification of Deformation Mode dropdown.")]
+        public virtual void _08VerificationOfDeformationModeDropdown_()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("_08 Verification of Deformation Mode dropdown.", null, ((string[])(null)));
+#line 132
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 133
+testRunner.Given("Go to url.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 134
+testRunner.When("user login with credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 135
+testRunner.Then("After landing on sharkspray page, click on AdhesiveType Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
-                        "DeformationMode"});
+                        "AdhesiveType"});
             table22.AddRow(new string[] {
+                        "PSA - Adhesive Double-Coated Tape (DCT)"});
+#line 136
+testRunner.And("Select adhesive type from dropdown.", ((string)(null)), table22, "And ");
+#line 139
+testRunner.Then("click on Model Phase Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+                        "ModelPhase"});
+            table23.AddRow(new string[] {
+                        "Phase 1(DMA)"});
+#line 140
+testRunner.And("Select Model Phase from dropdown.", ((string)(null)), table23, "And ");
+#line 143
+testRunner.Then("Click on Division Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Division"});
+            table24.AddRow(new string[] {
+                        "EMSD"});
+#line 144
+testRunner.And("Select Division from dropdown.", ((string)(null)), table24, "And ");
+#line 147
+testRunner.And("click on drop DMA files button and upload file.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
+                        "DeformationMode"});
+            table25.AddRow(new string[] {
                         "Tension"});
-#line 129
-testRunner.And("Select deformation Mode from dropdown.", ((string)(null)), table22, "And ");
+#line 148
+testRunner.And("Select deformation Mode from dropdown.", ((string)(null)), table25, "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -422,43 +471,43 @@ testRunner.And("Select deformation Mode from dropdown.", ((string)(null)), table
         public virtual void _09VerificationOfDensity_()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("_09 Verification of Density.", null, ((string[])(null)));
-#line 133
+#line 152
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 134
+#line 153
 testRunner.Given("Go to url.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 135
+#line 154
 testRunner.When("user login with credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 136
+#line 155
 testRunner.Then("After landing on sharkspray page, click on AdhesiveType Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
                         "AdhesiveType"});
-            table23.AddRow(new string[] {
+            table26.AddRow(new string[] {
                         "PSA - Adhesive Double-Coated Tape (DCT)"});
-#line 137
-testRunner.And("Select adhesive type from dropdown.", ((string)(null)), table23, "And ");
-#line 140
+#line 156
+testRunner.And("Select adhesive type from dropdown.", ((string)(null)), table26, "And ");
+#line 159
 testRunner.Then("click on Model Phase Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
                         "ModelPhase"});
-            table24.AddRow(new string[] {
+            table27.AddRow(new string[] {
                         "Phase 1(DMA)"});
-#line 141
-testRunner.And("Select Model Phase from dropdown.", ((string)(null)), table24, "And ");
-#line 144
+#line 160
+testRunner.And("Select Model Phase from dropdown.", ((string)(null)), table27, "And ");
+#line 163
 testRunner.Then("Click on Division Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
                         "Division"});
-            table25.AddRow(new string[] {
+            table28.AddRow(new string[] {
                         "EMSD"});
-#line 145
-testRunner.And("Select Division from dropdown.", ((string)(null)), table25, "And ");
-#line 148
+#line 164
+testRunner.And("Select Division from dropdown.", ((string)(null)), table28, "And ");
+#line 167
 testRunner.And("click on drop DMA files button and upload file.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 149
+#line 168
 testRunner.And("Send density value.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -469,50 +518,50 @@ testRunner.And("Send density value.", ((string)(null)), ((TechTalk.SpecFlow.Tabl
         public virtual void _10VerificationOfGenerateConstitutiveMechanicalModelButton_()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("_10 Verification of generate constitutive  mechanical model button.", null, ((string[])(null)));
-#line 151
+#line 170
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 152
+#line 171
 testRunner.Given("Go to url.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 153
+#line 172
 testRunner.When("user login with credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 154
+#line 173
 testRunner.Then("After landing on sharkspray page, click on AdhesiveType Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
                         "AdhesiveType"});
-            table26.AddRow(new string[] {
+            table29.AddRow(new string[] {
                         "PSA - Adhesive Double-Coated Tape (DCT)"});
-#line 155
-testRunner.And("Select adhesive type from dropdown.", ((string)(null)), table26, "And ");
-#line 158
+#line 174
+testRunner.And("Select adhesive type from dropdown.", ((string)(null)), table29, "And ");
+#line 177
 testRunner.Then("click on Model Phase Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
                         "ModelPhase"});
-            table27.AddRow(new string[] {
+            table30.AddRow(new string[] {
                         "Phase 1(DMA)"});
-#line 159
-testRunner.And("Select Model Phase from dropdown.", ((string)(null)), table27, "And ");
-#line 162
+#line 178
+testRunner.And("Select Model Phase from dropdown.", ((string)(null)), table30, "And ");
+#line 181
 testRunner.Then("Click on Division Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table31 = new TechTalk.SpecFlow.Table(new string[] {
                         "Division"});
-            table28.AddRow(new string[] {
+            table31.AddRow(new string[] {
                         "EMSD"});
-#line 163
-testRunner.And("Select Division from dropdown.", ((string)(null)), table28, "And ");
-#line 166
+#line 182
+testRunner.And("Select Division from dropdown.", ((string)(null)), table31, "And ");
+#line 185
 testRunner.And("click on drop DMA files button and upload file.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table32 = new TechTalk.SpecFlow.Table(new string[] {
                         "DeformationMode"});
-            table29.AddRow(new string[] {
+            table32.AddRow(new string[] {
                         "Tension"});
-#line 167
-testRunner.And("Select deformation Mode from dropdown.", ((string)(null)), table29, "And ");
-#line 170
+#line 186
+testRunner.And("Select deformation Mode from dropdown.", ((string)(null)), table32, "And ");
+#line 189
 testRunner.And("click on generate constitutive mechanical model button.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -523,43 +572,43 @@ testRunner.And("click on generate constitutive mechanical model button.", ((stri
         public virtual void _11MultipleDMACompressFileUpload_()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("_11 Multiple DMA (compress) file upload.", null, ((string[])(null)));
-#line 172
+#line 191
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 173
+#line 192
 testRunner.Given("Go to url.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 174
+#line 193
 testRunner.When("user login with credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 175
+#line 194
 testRunner.Then("After landing on sharkspray page, click on AdhesiveType Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table33 = new TechTalk.SpecFlow.Table(new string[] {
                         "AdhesiveType"});
-            table30.AddRow(new string[] {
+            table33.AddRow(new string[] {
                         "PSA - Adhesive Double-Coated Tape (DCT)"});
-#line 176
-testRunner.And("Select adhesive type from dropdown.", ((string)(null)), table30, "And ");
-#line 179
+#line 195
+testRunner.And("Select adhesive type from dropdown.", ((string)(null)), table33, "And ");
+#line 198
 testRunner.Then("click on Model Phase Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table31 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table34 = new TechTalk.SpecFlow.Table(new string[] {
                         "ModelPhase"});
-            table31.AddRow(new string[] {
+            table34.AddRow(new string[] {
                         "Phase 2(DMA + Compression)"});
-#line 180
-testRunner.And("Select Model Phase from dropdown.", ((string)(null)), table31, "And ");
-#line 183
+#line 199
+testRunner.And("Select Model Phase from dropdown.", ((string)(null)), table34, "And ");
+#line 202
 testRunner.Then("Click on Division Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table32 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table35 = new TechTalk.SpecFlow.Table(new string[] {
                         "Division"});
-            table32.AddRow(new string[] {
+            table35.AddRow(new string[] {
                         "EMSD"});
-#line 184
-testRunner.And("Select Division from dropdown.", ((string)(null)), table32, "And ");
-#line 187
+#line 203
+testRunner.And("Select Division from dropdown.", ((string)(null)), table35, "And ");
+#line 206
 testRunner.And("click on drop DMA files button and upload file.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 188
+#line 207
 testRunner.Then("Upload compression file.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -570,45 +619,45 @@ testRunner.Then("Upload compression file.", ((string)(null)), ((TechTalk.SpecFlo
         public virtual void _12MultipleDMATesnionFileUpload_()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("_12 Multiple DMA (Tesnion) file upload.", null, ((string[])(null)));
-#line 190
+#line 209
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 191
+#line 210
 testRunner.Given("Go to url.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 192
+#line 211
 testRunner.When("user login with credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 193
+#line 212
 testRunner.Then("After landing on sharkspray page, click on AdhesiveType Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table33 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table36 = new TechTalk.SpecFlow.Table(new string[] {
                         "AdhesiveType"});
-            table33.AddRow(new string[] {
+            table36.AddRow(new string[] {
                         "PSA - Adhesive Double-Coated Tape (DCT)"});
-#line 194
-testRunner.And("Select adhesive type from dropdown.", ((string)(null)), table33, "And ");
-#line 197
+#line 213
+testRunner.And("Select adhesive type from dropdown.", ((string)(null)), table36, "And ");
+#line 216
 testRunner.Then("click on Model Phase Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table34 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table37 = new TechTalk.SpecFlow.Table(new string[] {
                         "ModelPhase"});
-            table34.AddRow(new string[] {
+            table37.AddRow(new string[] {
                         "Phase 3(DMA + Compression + Tension)"});
-#line 198
-testRunner.And("Select Model Phase from dropdown.", ((string)(null)), table34, "And ");
-#line 201
+#line 217
+testRunner.And("Select Model Phase from dropdown.", ((string)(null)), table37, "And ");
+#line 220
 testRunner.Then("Click on Division Dropdown.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table35 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table38 = new TechTalk.SpecFlow.Table(new string[] {
                         "Division"});
-            table35.AddRow(new string[] {
+            table38.AddRow(new string[] {
                         "EMSD"});
-#line 202
-testRunner.And("Select Division from dropdown.", ((string)(null)), table35, "And ");
-#line 205
+#line 221
+testRunner.And("Select Division from dropdown.", ((string)(null)), table38, "And ");
+#line 224
 testRunner.And("click on drop DMA files button and upload file.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 206
+#line 225
 testRunner.Then("Upload compression file.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 207
+#line 226
 testRunner.And("Upload tension file.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
