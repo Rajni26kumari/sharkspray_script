@@ -123,6 +123,7 @@
     <Compile Include="StepDefinitions\CreateNewModelsSteps.cs" />
     <Compile Include="StepDefinitions\EditYourModelsSteps.cs" />
     <Compile Include="StepDefinitions\ExportandSaveModelsSteps.cs" />
+    <Compile Include="StepDefinitions\HashCodeComparisonSteps.cs" />
     <Compile Include="StepDefinitions\LoadYourModelsSteps.cs" />
     <Compile Include="StepDefinitions\VerifiedModelsSteps.cs" />
     <Compile Include="StepDefinitions\VisualizeModelDataSteps.cs" />
@@ -140,6 +141,7 @@
     <None Include="Features\CreateNewModels.feature" />
     <None Include="Features\EditYourModels.feature" />
     <None Include="Features\ExportandSaveModels.feature" />
+    <None Include="Features\HashCodeComparison.feature" />
     <None Include="Features\LoadYourModels.feature" />
     <None Include="Features\VerifiedModels.feature" />
     <None Include="Features\VisualizeModelData.feature" />
