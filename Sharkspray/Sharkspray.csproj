@@ -113,6 +113,7 @@
     <Compile Include="Features\CreateNewModels.feature.cs" />
     <Compile Include="Features\EditYourModels.feature.cs" />
     <Compile Include="Features\ExportandSaveModels.feature.cs" />
+    <Compile Include="Features\HashCodeComparison.feature.cs" />
     <Compile Include="Features\LoadYourModels.feature.cs" />
     <Compile Include="Features\VerifiedModels.feature.cs" />
     <Compile Include="Features\VisualizeModelData.feature.cs" />
