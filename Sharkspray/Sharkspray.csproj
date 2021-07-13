@@ -47,14 +47,20 @@
     <Reference Include="BoDi, Version=1.4.1.0, Culture=neutral, PublicKeyToken=ff7cd5ea2744b496, processorArchitecture=MSIL">
       <HintPath>..\packages\BoDi.1.4.1\lib\net45\BoDi.dll</HintPath>
     </Reference>
+    <Reference Include="ClosedXML, Version=0.86.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.Plus.Excel.2-4-0.1.8.0-unstable036\lib\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.Plus.Excel.2-4-0.1.8.0-unstable036\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
     <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
     </Reference>
     <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
     </Reference>
-    <Reference Include="Gherkin, Version=6.0.0.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851, processorArchitecture=MSIL">
-      <HintPath>..\packages\Gherkin.6.0.0\lib\net45\Gherkin.dll</HintPath>
+    <Reference Include="Gherkin, Version=5.0.0.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.Plus.Excel.2-4-0.1.8.0-unstable036\lib\Gherkin.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
@@ -80,6 +86,12 @@
     </Reference>
     <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="SpecFlow.Plus.Excel, Version=1.8.0.0, Culture=neutral, PublicKeyToken=d0fc5cc18b3b389b, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.Plus.Excel.2-4-0.1.8.0-unstable036\lib\SpecFlow.Plus.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="SpecFlow.Plus.Excel.SpecFlowPlugin, Version=1.8.0.0, Culture=neutral, PublicKeyToken=d0fc5cc18b3b389b, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.Plus.Excel.2-4-0.1.8.0-unstable036\lib\SpecFlow.Plus.Excel.SpecFlowPlugin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -108,76 +120,136 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bindings\SharksprayHooks.cs" />
-    <Compile Include="ConfigFiles\BrowserConfig.cs" />
-    <Compile Include="Features\CreateNewModels.feature.cs" />
-    <Compile Include="Features\EditYourModels.feature.cs" />
-    <Compile Include="Features\ExportandSaveModels.feature.cs" />
-    <Compile Include="Features\HashCodeComparison.feature.cs" />
-    <Compile Include="Features\LoadYourModels.feature.cs" />
-    <Compile Include="Features\VerifiedModels.feature.cs" />
-    <Compile Include="Features\VisualizeModelData.feature.cs" />
+    <Compile Include="General_TC\Bindings\SharksprayHooks.cs" />
+    <Compile Include="General_TC\ConfigFiles\BrowserConfig.cs" />
+    <Compile Include="General_TC\Features\CreateNewModels.feature.cs" />
+    <Compile Include="General_TC\Features\EditYourModels.feature.cs" />
+    <Compile Include="General_TC\Features\ExportandSaveModels.feature.cs" />
+    <Compile Include="General_TC\Features\HashCodeComparison.feature.cs" />
+    <Compile Include="General_TC\Features\LoadYourModels.feature.cs" />
+    <Compile Include="General_TC\Features\VerifiedModels.feature.cs" />
+    <Compile Include="General_TC\Features\VisualizeModelData.feature.cs" />
+    <Compile Include="General_TC\StepDefinitions\CreateNewModelsSteps.cs" />
+    <Compile Include="General_TC\StepDefinitions\EditYourModelsSteps.cs" />
+    <Compile Include="General_TC\StepDefinitions\ExportandSaveModelsSteps.cs" />
+    <Compile Include="General_TC\StepDefinitions\HashCodeComparisonSteps.cs" />
+    <Compile Include="General_TC\StepDefinitions\LoadYourModelsSteps.cs" />
+    <Compile Include="General_TC\StepDefinitions\VerifiedModelsSteps.cs" />
+    <Compile Include="General_TC\StepDefinitions\VisualizeModelDataSteps.cs" />
+    <Compile Include="General_TC\Utility\ExplicitWaiting.cs" />
+    <Compile Include="General_TC\Utility\GetValues.cs" />
+    <Compile Include="General_TC\Utility\HelpingFunctions.cs" />
+    <Compile Include="General_TC\Utility\ObjectIdentifiers.cs" />
+    <Compile Include="General_TC\Utility\TakeScreenshot.cs" />
+    <Compile Include="General_TC\Utility\WriteResult.cs" />
+    <Compile Include="JSON_TC\Features\Sharkspray.feature.cs" />
+    <Compile Include="JSON_TC\Helper\BrowserConfig.cs" />
+    <Compile Include="JSON_TC\Helper\CreateDropdowns.cs" />
+    <Compile Include="JSON_TC\Helper\ExplicitWaiting.cs" />
+    <Compile Include="JSON_TC\Helper\HelpFunction.cs" />
+    <Compile Include="JSON_TC\Hooks\Binding.cs" />
+    <Compile Include="JSON_TC\StepDefinations\SharksprayStepDefinations.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StepDefinitions\CreateNewModelsSteps.cs" />
-    <Compile Include="StepDefinitions\EditYourModelsSteps.cs" />
-    <Compile Include="StepDefinitions\ExportandSaveModelsSteps.cs" />
-    <Compile Include="StepDefinitions\HashCodeComparisonSteps.cs" />
-    <Compile Include="StepDefinitions\LoadYourModelsSteps.cs" />
-    <Compile Include="StepDefinitions\VerifiedModelsSteps.cs" />
-    <Compile Include="StepDefinitions\VisualizeModelDataSteps.cs" />
-    <Compile Include="Utility\ExplicitWaiting.cs" />
-    <Compile Include="Utility\GetValues.cs" />
-    <Compile Include="Utility\HelpingFunctions.cs" />
-    <Compile Include="Utility\ObjectIdentifiers.cs" />
-    <Compile Include="Utility\TakeScreenshot.cs" />
-    <Compile Include="Utility\WriteResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Features\CreateNewModels.feature" />
-    <None Include="Features\EditYourModels.feature" />
-    <None Include="Features\ExportandSaveModels.feature" />
-    <None Include="Features\HashCodeComparison.feature" />
-    <None Include="Features\LoadYourModels.feature" />
-    <None Include="Features\VerifiedModels.feature" />
-    <None Include="Features\VisualizeModelData.feature" />
+    <None Include="General_TC\Features\CreateNewModels.feature" />
+    <None Include="General_TC\Features\EditYourModels.feature" />
+    <None Include="General_TC\Features\ExportandSaveModels.feature" />
+    <None Include="General_TC\Features\HashCodeComparison.feature" />
+    <None Include="General_TC\Features\LoadYourModels.feature" />
+    <None Include="General_TC\Features\VerifiedModels.feature" />
+    <None Include="General_TC\Features\VisualizeModelData.feature" />
+    <None Include="General_TC\Resources\rheology.xlsx" />
+    <None Include="General_TC\Resources\tension.xlsx" />
+    <None Include="General_TC\TestResult\CreateNewModel.xlsx" />
+    <None Include="General_TC\TestResult\EditYourModel.xlsx" />
+    <None Include="General_TC\TestResult\ExportandSaveModel.xlsx" />
+    <None Include="General_TC\TestResult\LoadYourModel.xlsx" />
+    <None Include="General_TC\TestResult\VerifiedModel.xlsx" />
+    <None Include="General_TC\TestResult\VisualizeModelData.xlsx" />
+    <None Include="HASH_CODE\ReferenceFiles\Zipped\rheology_xlsx_ModelFiles.zip" />
+    <None Include="HASH_CODE\TestFiles\Zipped\rheology_ModelFiles.zip" />
+    <None Include="JSON_TC\Features\Sharkspray.feature" />
+    <None Include="JSON_TC\Features\Sharkspray_Testcases.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="JSON_TC\TestFiles\oca.xlsx" />
+    <None Include="JSON_TC\TestFiles\oca2_tension.xlsx" />
+    <None Include="JSON_TC\TestFiles\q800.001" />
+    <None Include="JSON_TC\TestFiles\sa_bt1.xlsx" />
+    <None Include="JSON_TC\TestFiles\tobias.xlsx" />
+    <None Include="JSON_TC\TestFiles\tobias_v2.xlsx" />
     <None Include="killChromedriver.bat" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Resources\rheology.xlsx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\tension.xlsx" />
-    <None Include="TestResult\CreateNewModel.xlsx" />
-    <None Include="TestResult\EditYourModel.xlsx" />
-    <None Include="TestResult\ExportandSaveModel.xlsx" />
-    <None Include="TestResult\LoadYourModel.xlsx" />
-    <None Include="TestResult\VerifiedModel.xlsx" />
-    <None Include="TestResult\VisualizeModelData.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\packages\Selenium.Mozilla.Firefox.Webdriver.0.6.0.1\driver\wires-0.6.0-win.exe">
       <Link>wires-0.6.0-win.exe</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="AutiITScripts\AutoitScript.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="AutiITScripts\cred.exe" />
     <Content Include="AutiITScripts\FileUpload1.exe" />
     <Content Include="chromedriver.exe" />
+    <Content Include="General_TC\Resources\compression.xml" />
+    <Content Include="General_TC\Screenshots\After landing on sharkspray page, click on AdhesiveType Dropdown.jpg" />
+    <Content Include="General_TC\Screenshots\check the status of update master curve button.jpg" />
+    <Content Include="General_TC\Screenshots\Clear the default value and enter the new value.jpg" />
+    <Content Include="General_TC\Screenshots\Click on cancel upload button to cancel uploading the file.jpg" />
+    <Content Include="General_TC\Screenshots\click on drop DMA files button and upload file.jpg" />
+    <Content Include="General_TC\Screenshots\Click on Edit Your Models.jpg" />
+    <Content Include="General_TC\Screenshots\click on load constitutive mechanical model button.jpg" />
+    <Content Include="General_TC\Screenshots\Click on Load your Models .jpg" />
+    <Content Include="General_TC\Screenshots\Click on model name text-box and write a name.jpg" />
+    <Content Include="General_TC\Screenshots\click on Model Name.jpg" />
+    <Content Include="General_TC\Screenshots\click on remove file button to remove the uploaded file.jpg" />
+    <Content Include="General_TC\Screenshots\Enter data in searchbox.jpg" />
+    <Content Include="General_TC\Screenshots\search for a model.jpg" />
+    <Content Include="General_TC\Screenshots\Select adhesive type from dropdown.jpg" />
+    <Content Include="General_TC\Screenshots\select chart type from dropdown.jpg" />
+    <Content Include="General_TC\Screenshots\Send density value.jpg" />
+    <Content Include="General_TC\Screenshots\user login with credentials.jpg" />
+    <Content Include="General_TC\Screenshots\verify file saved.jpg" />
+    <Content Include="General_TC\Screenshots\Verify file upload.jpg" />
+    <Content Include="General_TC\Screenshots\Verify Model saved.jpg" />
+    <Content Include="General_TC\Screenshots\Verify model selection.jpg" />
+    <Content Include="General_TC\Screenshots\verify Selected Model.jpg" />
+    <Content Include="HASH_CODE\TestFiles\HASHCODES\Test Data_rheology_MasterCurve.xlsx__14144663dc8150b064e7450f41a94d6e.txt" />
+    <Content Include="HASH_CODE\TestFiles\HASHCODES\XML_rheology.xml__25390016e7da2026970c70cda9225a62.txt" />
+    <Content Include="JSON_TC\TestFiles\oca2_compression.xml" />
+    <Content Include="JSON_TC\TestFiles\oca2_dma.xml" />
+    <Content Include="JSON_TC\TestFiles\orchestrator_hitemp.txt" />
+    <Content Include="JSON_TC\TestFiles\orchestrator_lowtemp.txt" />
+    <Content Include="JSON_TC\TestFiles\q800.txt" />
+    <Content Include="JSON_TC\TestFiles\trios_hitemp.txt" />
+    <Content Include="JSON_TC\TestFiles\trios_hitemp_headings-notes.txt" />
+    <Content Include="JSON_TC\TestFiles\trios_hitemp_headings-parameters.txt" />
+    <Content Include="JSON_TC\TestFiles\trios_hitemp_headings.txt" />
+    <Content Include="JSON_TC\TestFiles\trios_hitemp_no-details.txt" />
+    <Content Include="JSON_TC\TestFiles\trios_hitemp_parameters-no-details.txt" />
+    <Content Include="JSON_TC\TestFiles\trios_lowtemp.txt" />
+    <Content Include="JSON_TC\TestFiles\trios_lowtemp_headings-notes.txt" />
+    <Content Include="JSON_TC\TestFiles\trios_lowtemp_headings-parameters.txt" />
+    <Content Include="JSON_TC\TestFiles\trios_lowtemp_headings.txt" />
+    <Content Include="JSON_TC\TestFiles\trios_lowtemp_no-details.txt" />
+    <Content Include="JSON_TC\TestFiles\trios_lowtemp_parameters-no-details.txt" />
     <Content Include="Readme.txt" />
-    <Content Include="Resources\compression.xml" />
+    <Content Include="Screenshots\After landing on sharkspray page, click on AdhesiveType Dropdown.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
-    <Folder Include="Screenshots\" />
+    <Folder Include="HASH_CODE\ReferenceFiles\HASHCODES\" />
+    <Folder Include="HASH_CODE\ReferenceFiles\UnZipped\" />
+    <Folder Include="HASH_CODE\TestFiles\UnZipped\" />
+    <Folder Include="TestResult\" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AutoItX3Lib">

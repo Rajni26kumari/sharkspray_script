@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!-- 3M Material Data  -->
+<!-- Copyright 3M Company -->
+<!-- PLEASE SEE IMPORTANT LEGAL DISCLAIMER REGARDING THE USE OF THIS MATERIAL MODEL AT:-->
+<!-- https://3m.com/fea-->
+<!-- Export date: 2021-05-20 -->
+<!-- Verification code: 3678315feff17b71711bab618b2fe758eb9991eb7e565a15dc9a82de5c052cf3-->
+<!--  -->
+<material key="rheology" category="None" subcategory="None" source="3M" unitSystem="mm-N-s">
+  <description></description>
+  <experimentStrainLimit stressState="Uniaxial" min="0.0" max="0.0"/>
+  <experimentStrainLimit stressState="Biaxial" min="0.0" max="0.0"/>
+  <experimentStrainLimit stressState="Planar" min="0.0" max="0.0"/>
+  <experimentStrainLimit stressState="Volumetric" min="0.0" max="0.0"/>
+  <density temperatureDependency="OFF" dependencies="0" distributionType="UNIFORM" fieldName="">
+    <table>
+      <row>
+        <value> 1.000000000e-09</value>
+      </row>
+    </table>
+  </density>
+  <elasticity type="ISOTROPIC" temperatureDependency="OFF" moduli="INSTANTANEOUS">
+    <table>
+      <row>
+        <value> 8.764398490e+03</value>
+        <value> 4.900000000e-01</value>
+      </row>
+    </table>
+  </elasticity>
+  <viscoelasticity domain="TIME" frequency="FORMULA" type="ISOTROPIC" preload="NONE" time="PRONY" errtol="0.01" nmax="13">
+    <table name="table">
+      <row>
+        <value> 5.968647115e-02</value>
+        <value> 0.000000000e+00</value>
+        <value> 1.000000000e-10</value>
+      </row>
+      <row>
+        <value> 4.701077456e-02</value>
+        <value> 0.000000000e+00</value>
+        <value> 1.584893192e-09</value>
+      </row>
+      <row>
+        <value> 3.623274504e-02</value>
+        <value> 0.000000000e+00</value>
+        <value> 2.511886432e-08</value>
+      </row>
+      <row>
+        <value> 2.842686778e-02</value>
+        <value> 0.000000000e+00</value>
+        <value> 3.981071706e-07</value>
+      </row>
+      <row>
+        <value> 2.497286650e-02</value>
+        <value> 0.000000000e+00</value>
+        <value> 6.309573445e-06</value>
+      </row>
+      <row>
+        <value> 2.599758303e-02</value>
+        <value> 0.000000000e+00</value>
+        <value> 1.000000000e-04</value>
+      </row>
+      <row>
+        <value> 3.567053584e-02</value>
+        <value> 0.000000000e+00</value>
+        <value> 1.584893192e-03</value>
+      </row>
+      <row>
+        <value> 5.878687128e-02</value>
+        <value> 0.000000000e+00</value>
+        <value> 2.511886432e-02</value>
+      </row>
+      <row>
+        <value> 1.176811939e-01</value>
+        <value> 0.000000000e+00</value>
+        <value> 3.981071706e-01</value>
+      </row>
+      <row>
+        <value> 3.804021205e-01</value>
+        <value> 0.000000000e+00</value>
+        <value> 6.309573445e+00</value>
+      </row>
+      <row>
+        <value> 1.540632119e-01</value>
+        <value> 0.000000000e+00</value>
+        <value> 1.000000000e+02</value>
+      </row>
+      <row>
+        <value> 1.692918915e-02</value>
+        <value> 0.000000000e+00</value>
+        <value> 1.584893192e+03</value>
+      </row>
+      <row>
+        <value> 4.568281552e-03</value>
+        <value> 0.000000000e+00</value>
+        <value> 2.511886432e+04</value>
+      </row>
+      <row>
+        <value> 1.878888247e-03</value>
+        <value> 0.000000000e+00</value>
+        <value> 3.981071706e+05</value>
+      </row>
+    </table>
+  </viscoelasticity>
+</material>
+</xml>
