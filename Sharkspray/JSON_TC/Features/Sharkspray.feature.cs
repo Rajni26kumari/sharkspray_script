@@ -73,7 +73,9 @@ namespace Sharkspray.JSON_TC.Features
         [NUnit.Framework.DescriptionAttribute("Visualize Model Data.")]
         [NUnit.Framework.TestCaseAttribute("1", "q800", "q800.001", "", "", "1", "PSA - Adhesive Transfer Tape (ATT)", "Phase 1 (DMA)", "auto", "True", "q800_ModelFiles.zip", new string[] {
                 "source:Sharkspray_Testcases.xlsx:sheet1"}, Category="source:Sharkspray_Testcases.xlsx:sheet1")]
-        [NUnit.Framework.TestCaseAttribute("2", "q800_bad", "q800.txt", "", "", "1", "PSA - Adhesive Transfer Tape (ATT", "Phase 1 (DMA", "auto", "False", "", new string[] {
+        [NUnit.Framework.TestCaseAttribute("2", "q800_bad", "q800.txt", "", "", "1", "PSA - Adhesive Transfer Tape (ATT)", "Phase 1 (DMA", "auto", "False", "", new string[] {
+                "source:Sharkspray_Testcases.xlsx:sheet1"}, Category="source:Sharkspray_Testcases.xlsx:sheet1")]
+        [NUnit.Framework.TestCaseAttribute("3", "oca2_p3", "oca2_dma.xml", "oca2_compression.xml", "oca2_tension.xlsx", "1", "PSA - Adhesive Transfer Tape (ATT)", "Phase 3 (DMA + Compression + Tension)", "Tension", "True", "oca2_p3_ModelFiles.zip", new string[] {
                 "source:Sharkspray_Testcases.xlsx:sheet1"}, Category="source:Sharkspray_Testcases.xlsx:sheet1")]
         public virtual void VisualizeModelData_(string sno_, string name, string dma_Filename, string compression_Filename, string tension_Filename, string reps, string adhesiveType, string modelPhase, string deformation_Mode, string should_Build, string reference_Filename, string[] exampleTags)
         {

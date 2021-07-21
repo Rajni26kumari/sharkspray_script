@@ -46,6 +46,13 @@ namespace Sharkspray.JSON_TC.Helper
                 throw _customException;
             }
         }
+        //public static void pageloadtime()
+        //{
+        //    try
+        //    {
+
+        //    }
+        //}
 
         /// <summary>
         /// to wait for specified time.

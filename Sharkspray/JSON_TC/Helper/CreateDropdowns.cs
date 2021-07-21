@@ -19,6 +19,7 @@ namespace Sharkspray.JSON_TC.Helper
         string FileUploadtPath = path + "\\AutiITScripts" + "\\FileUpload1" + ".exe";
         By _adhesiveDropdown1 = By.XPath("//div[@id='select-newmodel_adhesive_type_select']");
         By _modelPhaseDropdown = By.XPath("//div[@id='select-newmodel_phase_select']");
+       
         public void Setadhesivedropdowns(string adhesivetype, IWebDriver _driver)
         {     
            IWebElement dropdown= _driver.FindElement(By.XPath("//div[@id='select-newmodel_adhesive_type_select']"));
@@ -47,51 +48,172 @@ namespace Sharkspray.JSON_TC.Helper
                 }
             }
         }
-        public void FileUpload(string dmafiles,string compressionfile,string tesionfile)
+        public void deformationmode(string deformationmode,IWebDriver _driver)
         {
-            bool _destFolder = Directory.Exists(_destpath);
-            if (_destFolder)
-            {
-                string _destFile = _destpath + dmafiles;
-                bool _isFilePresent = File.Exists(_destFile);
-                if (_isFilePresent)
+            
+                IWebElement dropdown = _driver.FindElement(By.XPath("//div[@id='select-deformation_mode_select']"));
+                dropdown.Click();
+                IList<IWebElement> options = dropdown.FindElements(By.XPath("//*[@id='menu-deformation_mode_select']/div[2]/ul/li"));
+                foreach (IWebElement option in options)
                 {
-                    ExplicitWaiting.waitForTime(3000);
-                    BrowserConfig.webDriver.FindElement(By.XPath(ObjectIdentifiers._dropDmaFilesIdentifier)).Click();
-                    ExplicitWaiting.waitForTime(2000);
-                    string UploadFile = _destFile;
-                    try
+                    if (option.Text.Equals(deformationmode))
                     {
-                        Process.Start(FileUploadtPath, UploadFile);
-                    }
-                    catch (Exception _ex)
-                    {
-                        Console.WriteLine("Error" + _ex.Message);
-                    }
-                }
-                }
-                else
-                {
-                    Directory.CreateDirectory(_destpath);
-                    string _destFile = _destpath + dmafiles;
-                    bool _isFilePresent = File.Exists(_destFile);
-                    if (_isFilePresent)
-                    {
-                    ExplicitWaiting.waitForTime(3000);
-                    BrowserConfig.webDriver.FindElement(By.XPath(ObjectIdentifiers._dropDmaFilesIdentifier)).Click();
-                    ExplicitWaiting.waitForTime(2000);
-                    string UploadFile = _destFile;
-                    try
-                    {
-                        Process.Start(FileUploadtPath, UploadFile);
-                    }
-                    catch (Exception _ex)
-                    {
-                        Console.WriteLine("Error" + _ex.Message);
+                        option.Click();
+                        break;
                     }
                 }
             }
            
+        public void FileUpload(string dmafile,string compressionfile,string tesionfile)
+        {
+            string[] filename = new string[3] { "dmafile", "compressionfile", "tesionfile" };
+
+            for(int i=0 ;i< filename.Length; i++)
+            {
+                if (filename[i]== "dmafile")
+                {
+                    bool _destFolder = Directory.Exists(_destpath);
+                    if (_destFolder)
+                    {
+                        string _destFile = _destpath + dmafile;
+                        bool _isFilePresent = File.Exists(_destFile);
+                        if (_isFilePresent)
+                        {
+                            ExplicitWaiting.waitForTime(3000);
+                            BrowserConfig.webDriver.FindElement(By.XPath(ObjectIdentifiers._dropDmaFilesIdentifier)).Click();
+                            ExplicitWaiting.waitForTime(2000);
+                            string UploadFile = _destFile;
+                            try
+                            {
+                                Process.Start(FileUploadtPath, UploadFile);
+                            }
+                            catch (Exception _ex)
+                            {
+                                Console.WriteLine("Error" + _ex.Message);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(_destpath);
+                        string _destFile = _destpath + dmafile;
+                        bool _isFilePresent = File.Exists(_destFile);
+                        if (_isFilePresent)
+                        {
+                            ExplicitWaiting.waitForTime(3000);
+                            BrowserConfig.webDriver.FindElement(By.XPath(ObjectIdentifiers._dropDmaFilesIdentifier)).Click();
+                            ExplicitWaiting.waitForTime(2000);
+                            string UploadFile = _destFile;
+                            try
+                            {
+                                Process.Start(FileUploadtPath, UploadFile);
+                            }
+                            catch (Exception _ex)
+                            {
+                                Console.WriteLine("Error" + _ex.Message);
+                            }
+                        }
+                    }
+                }
+                else if (filename[i] == "compressionfile")
+                {
+                    bool _destFolder = Directory.Exists(_destpath);
+                    if (_destFolder)
+                    {
+                        string _destFile = _destpath + compressionfile;
+                        bool _isFilePresent = File.Exists(_destFile);
+                        if (_isFilePresent)
+                        {
+                            ExplicitWaiting.waitForTime(3000);
+                            BrowserConfig.webDriver.FindElement(By.XPath(ObjectIdentifiers._dropCompFilesIdentifier)).Click();
+                            ExplicitWaiting.waitForTime(2000);
+                            string UploadFile = _destFile;
+                            try
+                            {
+                                Process.Start(FileUploadtPath, UploadFile);
+                            }
+                            catch (Exception _ex)
+                            {
+                                Console.WriteLine("Error" + _ex.Message);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(_destpath);
+                        string _destFile = _destpath + compressionfile;
+                        bool _isFilePresent = File.Exists(_destFile);
+                        if (_isFilePresent)
+                        {
+                            ExplicitWaiting.waitForTime(3000);
+                            BrowserConfig.webDriver.FindElement(By.XPath(ObjectIdentifiers._dropCompFilesIdentifier)).Click();
+                            ExplicitWaiting.waitForTime(2000);
+                            string UploadFile = _destFile;
+                            try
+                            {
+                                Process.Start(FileUploadtPath, UploadFile);
+                            }
+                            catch (Exception _ex)
+                            {
+                                Console.WriteLine("Error" + _ex.Message);
+                            }
+                        }
+                    }
+
+                }
+                else if (filename[i] =="tesionfile")
+                {
+                    bool _destFolder = Directory.Exists(_destpath);
+                    if (_destFolder)
+                    {
+                        string _destFile = _destpath + tesionfile;
+                        bool _isFilePresent = File.Exists(_destFile);
+                        if (_isFilePresent)
+                        {
+                            ExplicitWaiting.waitForTime(3000);
+                            BrowserConfig.webDriver.FindElement(By.XPath(ObjectIdentifiers._dropTensFilesIdentifier)).Click();
+                            ExplicitWaiting.waitForTime(2000);
+                            string UploadFile = _destFile;
+                            try
+                            {
+                                Process.Start(FileUploadtPath, UploadFile);
+                            }
+                            catch (Exception _ex)
+                            {
+                                Console.WriteLine("Error" + _ex.Message);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(_destpath);
+                        string _destFile = _destpath + tesionfile;
+                        bool _isFilePresent = File.Exists(_destFile);
+                        if (_isFilePresent)
+                        {
+                            ExplicitWaiting.waitForTime(3000);
+                            BrowserConfig.webDriver.FindElement(By.XPath(ObjectIdentifiers._dropTensFilesIdentifier)).Click();
+                            ExplicitWaiting.waitForTime(2000);
+                            string UploadFile = _destFile;
+                            try
+                            {
+                                Process.Start(FileUploadtPath, UploadFile);
+                            }
+                            catch (Exception _ex)
+                            {
+                                Console.WriteLine("Error" + _ex.Message);
+                            }
+                        }
+                    }
+
+                }
+            }
         }
+            
+
+
+
+        }
+
     }
-}
+
