@@ -104,6 +104,8 @@ testRunner.And("Click on the export external data package(*.ZIP) and verify if i
 #line 15
 testRunner.Then("Extract the downloaded file.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 16
+testRunner.And(string.Format("Remove unnecessary lines from web_file & {0} before comparison.", reference_Filename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
 testRunner.And(string.Format("Comapre external downloaded zip file with {0} file", reference_Filename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

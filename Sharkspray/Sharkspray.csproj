@@ -155,7 +155,7 @@
     <Compile Include="General_TC\Utility\WriteResult.cs" />
     <Compile Include="JSON_TC\Features\Sharkspray.feature.cs" />
     <Compile Include="JSON_TC\Helper\BrowserConfig.cs" />
-    <Compile Include="JSON_TC\Helper\Compare-Hashcodegenerate.cs" />
+    <Compile Include="JSON_TC\Helper\CompareHashcodegenerate.cs" />
     <Compile Include="JSON_TC\Helper\CreateDropdowns.cs" />
     <Compile Include="JSON_TC\Helper\ExplicitWaiting.cs" />
     <Compile Include="JSON_TC\Helper\HelpFunction.cs" />
@@ -228,6 +228,7 @@
     <None Include="JSON_TC\TestFiles\sa_bt1.xlsx" />
     <None Include="JSON_TC\TestFiles\tobias.xlsx" />
     <None Include="JSON_TC\TestFiles\tobias_v2.xlsx" />
+    <None Include="JSON_TC\Web_files\Web_Zipped\oca2_dma_External_ModelFiles.zip" />
     <None Include="killChromedriver.bat" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
@@ -295,6 +296,7 @@
     <Folder Include="HASH_CODE\ReferenceFiles\UnZipped\" />
     <Folder Include="HASH_CODE\TestFiles\UnZipped\" />
     <Folder Include="JSON_TC\Test_files\" />
+    <Folder Include="JSON_TC\Web_files\Web_UnZipped\" />
     <Folder Include="TestResult\" />
   </ItemGroup>
   <ItemGroup>
@@ -314,7 +316,6 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.90.0.4430.2400\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.90.0.4430.2400\build\Selenium.WebDriver.ChromeDriver.targets'))" />
     <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.props'))" />
     <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets'))" />
     <Error Condition="!Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.11.0\build\NUnit.props'))" />
@@ -325,10 +326,11 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeCoverage.16.9.4\build\netstandard1.0\Microsoft.CodeCoverage.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeCoverage.16.9.4\build\netstandard1.0\Microsoft.CodeCoverage.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeCoverage.16.9.4\build\netstandard1.0\Microsoft.CodeCoverage.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeCoverage.16.9.4\build\netstandard1.0\Microsoft.CodeCoverage.targets'))" />
     <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.11.1\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.11.1\build\net35\NUnit3TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.92.0.4515.4300\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.92.0.4515.4300\build\Selenium.WebDriver.ChromeDriver.targets'))" />
   </Target>
-  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.90.0.4430.2400\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.90.0.4430.2400\build\Selenium.WebDriver.ChromeDriver.targets')" />
   <Import Project="..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets')" />
   <Import Project="..\packages\SpecFlow.2.4.1\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.4.1\build\SpecFlow.targets')" />
   <Import Project="..\packages\SpecFlow.Tools.MsBuild.Generation.2.4.1\build\SpecFlow.Tools.MsBuild.Generation.targets" Condition="Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.2.4.1\build\SpecFlow.Tools.MsBuild.Generation.targets')" />
   <Import Project="..\packages\Microsoft.CodeCoverage.16.9.4\build\netstandard1.0\Microsoft.CodeCoverage.targets" Condition="Exists('..\packages\Microsoft.CodeCoverage.16.9.4\build\netstandard1.0\Microsoft.CodeCoverage.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.92.0.4515.4300\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.92.0.4515.4300\build\Selenium.WebDriver.ChromeDriver.targets')" />
 </Project>

@@ -13,6 +13,7 @@ And Click on export and save model check-box and description.
 Then Click on the save select model button and verify it.
 And Click on the export external data package(*.ZIP) and verify if it downloaded.
 Then Extract the downloaded file.
+And Remove unnecessary lines from web_file & <reference_filename> before comparison.
 And Comapre external downloaded zip file with <reference_filename> file
 @source:Sharkspray_Testcases.xlsx:sheet1
 Examples:

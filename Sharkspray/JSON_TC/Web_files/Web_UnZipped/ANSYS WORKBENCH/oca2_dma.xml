@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EngineeringData version="19.1.0.125" versiondate="4/18/2018 2:37:00 PM">
+  <Notes>
+    3M Material Data
+    Copyright 3M Company
+
+    PLEASE SEE IMPORTANT LEGAL DISCLAIMER REGARDING THE USE OF THIS MATERIAL MODEL AT:
+    https://3m.com/fea
+
+    Export date: 2021-07-27
+    Verification code: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  </Notes>
+  <Materials>
+  <MatML_Doc>
+  <Material>
+    <BulkDetails>
+      <Name>oca2_dma</Name>
+      <Source>
+        <Name>3M</Name>
+      </Source>
+      <PropertyData property="pr0">
+        <Data format="string">-</Data>
+        <Qualifier name="Field Variable Compatible">Temperature</Qualifier>
+        <ParameterValue parameter="pa0" format="string">
+          <Data>Interpolation Options</Data>
+          <Qualifier name="AlgorithmType">Linear Multivariate</Qualifier>
+          <Qualifier name="Normalized">True</Qualifier>
+          <Qualifier name="Cached">True</Qualifier>
+        </ParameterValue>
+        <ParameterValue parameter="pa1" format="float">
+          <Data>1e-09</Data>
+          <Qualifier name="Variable Type">Dependent</Qualifier>
+        </ParameterValue>
+        <ParameterValue parameter="pa2" format="float">
+          <Data>0.0</Data>
+          <Qualifier name="Variable Type">Independent</Qualifier>
+          <Qualifier name="Field Variable">Temperature</Qualifier>
+          <Qualifier name="Default Data">0.0</Qualifier>
+          <Qualifier name="Field Units">C</Qualifier>
+          <Qualifier name="Upper Limit">Program Controlled</Qualifier>
+          <Qualifier name="Lower Limit">Program Controlled</Qualifier>
+        </ParameterValue>
+      </PropertyData>
+      <PropertyData property="pr1">
+        <Data format="string">-</Data>
+        <ParameterValue parameter="pa3" format="float">
+          <Data>0.394251</Data>
+          <Qualifier name="VariableType">Dependent</Qualifier>
+        </ParameterValue>
+        <ParameterValue parameter="pa4" format="float">
+          <Data>-0.0195726</Data>
+          <Qualifier name="VariableType">Dependent</Qualifier>
+        </ParameterValue>
+        <ParameterValue parameter="pa5" format="float">
+          <Data>0.000295106</Data>
+          <Qualifier name="VariableType">Dependent</Qualifier>
+        </ParameterValue>
+        <ParameterValue parameter="pa6" format="float">
+          <Data>0.12612</Data>
+          <Qualifier name="VariableType">Dependent</Qualifier>
+        </ParameterValue>
+      </PropertyData>
+      <PropertyData property="pr2">
+        <Data format="string">-</Data>
+        <Qualifier name="Definition">Shear Relaxation</Qualifier>
+        <Qualifier name="Number of Terms">14</Qualifier>
+        <ParameterValue parameter="pa7" format="float">
+          <Data>0.250501,0.281242,0.212751,0.151801,0.0711494,0.023452,0.00645087,0.00170205,0.000554234,0.000216496,0.00010167,4.26179e-05,1.76774e-05,1.01511e-06</Data>
+          <Qualifier name="Variable Type">Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent</Qualifier>
+        </ParameterValue>
+        <ParameterValue parameter="pa8" format="float">
+          <Data>1e-10,1e-09,1e-08,1e-07,1e-06,1e-05,0.0001,0.001,0.01,0.1,1,10,100,1000</Data>
+          <Qualifier name="Variable Type">Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent</Qualifier>
+        </ParameterValue>
+        <ParameterValue parameter="pa9" format="float">
+          <Data>0,1,2,3,4,5,6,7,8,9,10,11,12,13</Data>
+          <Qualifier name="Variable Type">Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent</Qualifier>
+        </ParameterValue>
+      </PropertyData>
+    </BulkDetails>
+  </Material>
+  <Metadata>
+    <ParameterDetails id="pa0">
+    <Name>Options Variable</Name>
+    <Unitless />
+    </ParameterDetails>
+    <ParameterDetails id="pa1">
+      <Name>Density</Name>
+      <Units name="Density">
+        <Unit>
+          <Name>tonne</Name>
+        </Unit>
+        <Unit power="-3">
+          <Name>mm</Name>
+        </Unit>
+      </Units>
+    </ParameterDetails>
+    <ParameterDetails id="pa2">
+      <Name>Temperature</Name>
+      <Units name="Temperature">
+        <Unit>
+          <Name>C</Name>
+        </Unit>
+      </Units>
+    </ParameterDetails>
+    <PropertyDetails id="pr0" type="mechanical">
+      <Unitless />
+      <Name>Density</Name>
+    </PropertyDetails>
+    <ParameterDetails id="pa3">
+      <Name>Dependent</Name>
+      <Units name="Stress">
+        <Unit>
+          <Name>MPa</Name>
+        </Unit>
+      </Units>
+    </ParameterDetails>
+    <ParameterDetails id="pa4">
+      <Name>Dependent</Name>
+      <Units name="Stress">
+        <Unit>
+          <Name>MPa</Name>
+        </Unit>
+      </Units>
+    </ParameterDetails>
+    <ParameterDetails id="pa5">
+      <Name>Dependent</Name>
+      <Units name="Stress">
+        <Unit>
+          <Name>MPa</Name>
+        </Unit>
+      </Units>
+    </ParameterDetails>
+    <ParameterDetails id="pa6">
+      <Name>Dependent</Name>
+      <Units name="Compressibility">
+        <Unit power="-1">
+          <Name>MPa</Name>
+        </Unit>
+      </Units>
+    </ParameterDetails>
+    <PropertyDetails id="pr1">
+      <Name>Yeoh</Name>
+      <Unitless/>
+    </PropertyDetails>
+    <ParameterDetails id="pa7">
+      <Name>Relative Moduli(i)</Name>
+      <Unitless />
+    </ParameterDetails>
+    <ParameterDetails id="pa8">
+      <Name>Relaxation Time(i)</Name>
+      <Units name="Time">
+        <Unit>
+          <Name>s</Name>
+        </Unit>
+      </Units>
+    </ParameterDetails>
+    <ParameterDetails id="pa9">
+      <Name>Index i</Name>
+      <Unitless />
+    </ParameterDetails>
+    <PropertyDetails id="pr2" type="mechanical">
+      <Unitless />
+      <Name>Prony</Name>
+    </PropertyDetails>
+    <PropertyDetails id="pr3" type="mechanical">
+      <Unitless />
+      <Name>Prony</Name>
+    </PropertyDetails>
+  </Metadata>
+</MatML_Doc>
+</Materials>
+</EngineeringData>

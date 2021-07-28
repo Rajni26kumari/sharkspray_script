@@ -18,12 +18,15 @@ namespace Sharkspray.JSON_TC.Helper
     class BrowserConfig
     {
         public static IWebDriver webDriver;
+
         public static readonly string _baseUrl = ConfigurationManager.AppSettings.Get("url");
         public static readonly string _browser = ConfigurationManager.AppSettings.Get("browsers");
         public static readonly string _username = ConfigurationManager.AppSettings.Get("username");
+        //string path1 = Environment.SpecialFolder.UserProfile + @"\Downloads";
         protected static string path = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "");
-        
-
+        //public static string _rootPath = AppDomain.CurrentDomain.BaseDirectory;
+        public static string _downloadpath = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "\\JSON_TC\\Test_files");
+        // public static string _destpath = AppDomain.CurrentDomain.BaseDirectory.Replace("\\ss-git\\sharkspray_script\\bin\\Debug", "");
 
         public static void Init()
         {
@@ -33,6 +36,7 @@ namespace Sharkspray.JSON_TC.Helper
                 string _currentUrl = webDriver.Url;
                 if (_currentUrl.Equals(_baseUrl))
                 {
+
                     Console.WriteLine("Already on sharkspray site ");
                 }
                 else
@@ -46,7 +50,14 @@ namespace Sharkspray.JSON_TC.Helper
                 switch (_browser)
                 {
                     case "Chrome":
-                        webDriver = new ChromeDriver();
+                       // webDriver = new ChromeDriver();
+                        Dictionary<string, object> perfs = new Dictionary<string, object>();
+                        perfs["profile.default_content_settings.popups"] = 0;
+                        perfs["download.default_directory"] = _downloadpath;
+                        ChromeOptions options = new ChromeOptions();
+                        options.AddUserProfilePreference("download.default_directory", _downloadpath);
+                        options.AddAdditionalCapability("perfs", perfs);
+                        webDriver = new ChromeDriver(options);
 
 
                         break;
@@ -83,7 +94,7 @@ namespace Sharkspray.JSON_TC.Helper
            // ExplicitWaiting.waitForAnElement(ObjectIdentifiers._next); ;
             webDriver.FindElement(By.XPath(ObjectIdentifiers._username)).SendKeys(_username);
             webDriver.FindElement(By.XPath(ObjectIdentifiers._next)).Click();
-            ExplicitWaiting.waitForTime(3000);
+            ExplicitWaiting.waitForAnElement(ObjectIdentifiers._workac);
             webDriver.FindElement(By.XPath(ObjectIdentifiers._workac)).Click();
             ExplicitWaiting.waitForTime(5000);
             string AutoITpath = path + "\\AutiITScripts" + "\\cred" + ".exe";
@@ -98,6 +109,18 @@ namespace Sharkspray.JSON_TC.Helper
             }
            
 
+        }
+        public static void filedownloadverification()
+        {
+            //Dictionary<string, object> perfs = new Dictionary<string, object>();
+            //perfs["profile.default_content_settings.popups"] = 0;
+            //perfs["download.default_directory"] = _downloadpath;
+            //ChromeOptions options = new ChromeOptions();
+            //options.AddUserProfilePreference("download.default_directory", _downloadpath);
+            //options.AddAdditionalCapability("perfs", perfs);
+            //webDriver=new ChromeDriver(options);
+            webDriver.FindElement(By.XPath(ObjectIdentifiers._exportModelasZipButton)).Click();
+            ExplicitWaiting.waitForAnElementUntilClickable(ObjectIdentifiers._exportModelasZipButton);
         }
     }
     }

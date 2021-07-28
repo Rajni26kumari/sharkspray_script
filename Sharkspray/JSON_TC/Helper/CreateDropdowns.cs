@@ -12,14 +12,25 @@ namespace Sharkspray.JSON_TC.Helper
 {
     class CreateDropdowns
     {
+        
+        
         public static string _rootPath = AppDomain.CurrentDomain.BaseDirectory;
-        //public static string _sourcePath = _rootPath + "\\TestFiles";
         public static string _destpath = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "\\JSON_TC\\TestFiles");
+        //public static string _destpath = AppDomain.CurrentDomain.BaseDirectory.Replace("\\ss-git\\sharkspray_script\\bin\\Debug", "\\Downloads");
         protected static string path = AppDomain.CurrentDomain.BaseDirectory.Replace("\\bin\\Debug", "");
         string FileUploadtPath = path + "\\AutiITScripts" + "\\FileUpload1" + ".exe";
         By _adhesiveDropdown1 = By.XPath("//div[@id='select-newmodel_adhesive_type_select']");
         By _modelPhaseDropdown = By.XPath("//div[@id='select-newmodel_phase_select']");
        
+        public void test()
+        {
+            DirectoryInfo dinfo2 = new DirectoryInfo(Environment.SpecialFolder.UserProfile + path);
+            FileInfo[] Files2 = dinfo2.GetFiles("*.sto");
+            foreach (FileInfo file2 in Files2)
+            {
+                
+            }
+        }
         public void Setadhesivedropdowns(string adhesivetype, IWebDriver _driver)
         {     
            IWebElement dropdown= _driver.FindElement(By.XPath("//div[@id='select-newmodel_adhesive_type_select']"));
